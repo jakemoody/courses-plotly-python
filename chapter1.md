@@ -155,36 +155,3 @@ Hang on tight - your code may take a moment to run :)
 success_msg("Super!")
 
 ```
---- type:NormalExercise lang:python xp:100 skills:2 key:60f9fb6a41
-## Plotly Histogram
-
-Make your 3rd Plotly Plot
-
-Hang on tight - your code may take a moment to run :)
-
-*** =instructions
-- Click submit answer
-
-*** =hint
-- No hints!
-*** =pre_exercise_code
-
-```{python}
-
-```
-
-*** =sample_code
-```{python}
-
-
-
-*** =solution
-```{python}
-
-```
-
-*** =sct
-```{python}
-success_msg("Super!")
-
-
