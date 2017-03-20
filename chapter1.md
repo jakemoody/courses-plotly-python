@@ -5,7 +5,7 @@ attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:880d44e748
-## Plotly example
+## Let's start with a scatter plot
 
 This exercise features an example of plotly.
 
@@ -43,7 +43,7 @@ trace = go.Scatter(
 data = [trace]
 
 # Plot and embed in ipython notebook!
-py.iplot(data, filename='basic-scatter')
+py.plot(data, filename='basic-scatter')
 
 ```
 
@@ -66,7 +66,7 @@ trace = go.Scatter(
 data = [trace]
 
 # Plot and embed in ipython notebook!
-py.iplot(data, filename='basic-scatter')
+py.plot(data, filename='basic-scatter')
 
 ```
 
@@ -74,8 +74,71 @@ py.iplot(data, filename='basic-scatter')
 ```{python}
 success_msg("Great work!")
 ```
+--- type:NormalExercise lang:python xp:100 skills:2 key:5e407595b2
+## Plotly Line Chart
+Create your second cool plot.
 
+Hang on tight - your code may take a moment to run :)
 
+*** =instructions
+- Just submit the code
+
+*** =hint
+
+*** =pre_exercise_code
+```{python}
+import plotly.plotly as py
+import plotly.graph_objs as go
+py.sign_in('datacamp_python', '9IB7oEs6qib6jiwOTwRA')
+```
+
+*** =sample_code
+```{python}
+
+# Create random data with numpy
+import numpy as np
+
+N = 500
+random_x = np.linspace(0, 1, N)
+random_y = np.random.randn(N)
+
+# Create a trace
+trace = go.Scatter(
+    x = random_x,
+    y = random_y
+)
+
+data = [trace]
+
+py.plot(data, filename='basic-line')
+
+```
+
+*** =solution
+```{python}
+# Create random data with numpy
+import numpy as np
+
+N = 500
+random_x = np.linspace(0, 1, N)
+random_y = np.random.randn(N)
+
+# Create a trace
+trace = go.Scatter(
+    x = random_x,
+    y = random_y
+)
+
+data = [trace]
+
+py.plot(data, filename='basic-line')
+
+```
+
+*** =sct
+```{python}
+
+```
 --- type:NormalExercise lang:python xp:100 skills:2 key:8546b612c1
 ## Plotly Line Chart
 
