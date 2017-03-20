@@ -75,69 +75,104 @@ py.plot(data, filename='basic-scatter')
 success_msg("Great work!")
 ```
 --- type:NormalExercise lang:python xp:100 skills:2 key:5e407595b2
-## Plotly Line Chart
-Create your second cool plot.
+## Temperature highs and lows
 
-Hang on tight - your code may take a moment to run :)
+Alright now it's time to learn by doing! In this exerise you will be challenged to create a Plotly line chart showing Avg. Temperature Highs and Lows in New York throughout 2014. The following data is already available in your environment:
+
+- `month`, contains each month
+- `high_2014`, contains the average high temperature for each month
+- `low_2014`, contains the average low temperature for each month
+
+Follow the instructions to complete the code and run the exercise to produce the plot!
 
 *** =instructions
-- Just submit the code
+- `trace0` has been done for you
+- Fill in the blanks to complete `trace1`. Use the code used to create `trace0` as a guide. 
 
 *** =hint
+- You'll need to input the `low_2014` object in one of the blanks. 
 
 *** =pre_exercise_code
 ```{python}
 import plotly.plotly as py
 import plotly.graph_objs as go
 py.sign_in('datacamp_python', '9IB7oEs6qib6jiwOTwRA')
+# Add data
+month = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+         'August', 'September', 'October', 'November', 'December']
+high_2014 = [28.8, 28.5, 37.0, 56.8, 69.7, 79.7, 78.5, 77.8, 74.1, 62.6, 45.3, 39.9]
+low_2014 = [12.7, 14.3, 18.6, 35.5, 49.9, 58.0, 60.0, 58.6, 51.7, 45.2, 32.2, 29.1]
 ```
 
 *** =sample_code
 ```{python}
+# Create and style traces
 
-# Create random data with numpy
-import numpy as np
+# trace0 is done for you
+trace0 = go.Scatter(
+    x = month,
+    y = high_2014,
+    name = 'High 2014',
+    line = dict(
+        color = ('rgb(205, 12, 24)'),
+        width = 4))
 
-N = 500
-random_x = np.linspace(0, 1, N)
-random_y = np.random.randn(N)
+# fill in the blanks         
+trace1 = go.Scatter(
+    x = ___,
+    y = ___,
+    name = 'Low 2014',
+    line = dict(
+        color = ('rgb(22, 96, 167)'),
+        width = 4,))
 
-# Create a trace
-trace = go.Scatter(
-    x = random_x,
-    y = random_y
-)
+data = [trace0, trace1]
 
-data = [trace]
+# Edit the layout - nothing to do here
+layout = dict(title = 'Average High and Low Temperatures in New York',
+              xaxis = dict(title = 'Month'),
+              yaxis = dict(title = 'Temperature (degrees F)'))
 
-py.plot(data, filename='basic-line')
-
+# Make the plot!
+fig = dict(data=data, layout=layout)
+py.plot(fig, filename='styled-line')
 ```
 
 *** =solution
 ```{python}
-# Create random data with numpy
-import numpy as np
+# Create and style traces
+trace0 = go.Scatter(
+    x = month,
+    y = high_2014,
+    name = 'High 2014',
+    line = dict(
+        color = ('rgb(205, 12, 24)'),
+        width = 4))
+        
+trace1 = go.Scatter(
+    x = month,
+    y = low_2014,
+    name = 'Low 2014',
+    line = dict(
+        color = ('rgb(22, 96, 167)'),
+        width = 4,))
 
-N = 500
-random_x = np.linspace(0, 1, N)
-random_y = np.random.randn(N)
+data = [trace0, trace1]
 
-# Create a trace
-trace = go.Scatter(
-    x = random_x,
-    y = random_y
-)
+# Edit the layout
+layout = dict(title = 'Average High and Low Temperatures in New York',
+              xaxis = dict(title = 'Month'),
+              yaxis = dict(title = 'Temperature (degrees F)'))
 
-data = [trace]
-
-py.plot(data, filename='basic-line')
+# Make the plot!
+fig = dict(data=data, layout=layout)
+py.plot(fig, filename='styled-line')
 
 ```
 
 *** =sct
 ```{python}
-success_msg("Great work!")
+success_msg("Great work! Plotly makes it easy to not only visualize the temperate changes over time, but also interactively view the specific measures for each month by hovering over the plot.")
 ```
 --- type:NormalExercise lang:python xp:100 skills:2 key:8546b612c1
 ## Try them together
