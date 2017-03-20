@@ -156,7 +156,6 @@ Now we're going to try and scatter plots and line plots together! We've already 
 - Finish the code to create `trace2` using `random_y2`
 - Combine the data by filling in the blanks!
 - Execute the code!
-- 
 *** =hint
 - Take a look at the previous exercises for a refresher on format!
 
