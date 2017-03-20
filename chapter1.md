@@ -72,13 +72,12 @@ Hang on tight - your code may take a moment to run :)
 *** =pre_exercise_code
 ```{python}
 import plotly.plotly as py
+from plotly.graph_objs import *
 py.sign_in('datacamp_python', '9IB7oEs6qib6jiwOTwRA')
 ```
 
 *** =sample_code
 ```{python}
-import plotly.plotly as py
-from plotly.graph_objs import *
 import pandas as pd
 
 df = pd.read_csv('https://plot.ly/~etpinard/191.csv')

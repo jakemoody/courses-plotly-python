@@ -1,6 +1,6 @@
 ---
-title       : Insert the chapter title here
-description : Insert the chapter description here
+title       : Let's try some more plots
+description : More advanced plotting
 --- type:NormalExercise lang:python xp:100 skills:2 key:f2824d0db0
 ## Plotly Boxplot
 
@@ -17,13 +17,12 @@ Hang on tight - your code may take a moment to run :)
 
 ```{python}
 import plotly.plotly as py
+from plotly.graph_objs import *
 py.sign_in('datacamp_python', '9IB7oEs6qib6jiwOTwRA')
 ```
 
 *** =sample_code
 ```{python}
-import plotly.plotly as py
-from plotly.graph_objs import *
 import pandas as pd
 
 df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv')
