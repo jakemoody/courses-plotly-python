@@ -140,7 +140,7 @@ py.plot(data, filename='basic-line')
 
 ```
 --- type:NormalExercise lang:python xp:100 skills:2 key:8546b612c1
-## Plotly Line Chart
+## Try them together
 
 Create your second cool plot.
 
