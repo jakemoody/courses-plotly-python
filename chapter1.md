@@ -7,7 +7,7 @@ attachments :
 --- type:NormalExercise lang:python xp:100 skills:1 key:880d44e748
 ## Let's start with a scatter plot
 
-This exercise features an example of plotly. We'll start by using Numpy to create some random data. Then, we'll plot the data as a scatter plot. Since this is the first exercise, we'll do most of the work :) Simply execute the code.
+This exercise features an example of plotly.
 
 Hang on tight - your code may take a moment to run :)
 
@@ -42,7 +42,7 @@ trace = go.Scatter(
 
 data = [trace]
 
-# Plot the data as a scatter plot!
+# Plot and embed in ipython notebook!
 py.plot(data, filename='basic-scatter')
 
 ```
@@ -65,204 +65,178 @@ trace = go.Scatter(
 
 data = [trace]
 
-# Plot the data as a scatter plot!
+# Plot and embed in ipython notebook!
 py.plot(data, filename='basic-scatter')
 
 ```
 
 *** =sct
 ```{python}
-success_msg("Great work! Plotly plots are interactive, so make sure you play around with the scatter plot you produced!")
+success_msg("Great work!")
 ```
-
 --- type:NormalExercise lang:python xp:100 skills:2 key:5e407595b2
-## Temperature highs and lows
+## Plotly Line Chart
+Create your second cool plot.
 
-Alright now it's time to learn by doing! In this exerise you will be challenged to create a Plotly line chart showing Avg. Temperature Highs and Lows in New York throughout 2014. The following data is already available in your environment:
-
-- `month`, contains each month
-- `high_2014`, contains the average high temperature for each month
-- `low_2014`, contains the average low temperature for each month
-
-Follow the instructions to complete the code and run the exercise to produce the plot!
+Hang on tight - your code may take a moment to run :)
 
 *** =instructions
-- `trace0` has been done for you
-- Fill in the blanks to complete `trace1`. Use the code used to create `trace0` as a guide. 
+- Just submit the code
 
 *** =hint
-- You'll need to input the `low_2014` object in one of the blanks. 
 
 *** =pre_exercise_code
 ```{python}
 import plotly.plotly as py
 import plotly.graph_objs as go
 py.sign_in('datacamp_python', '9IB7oEs6qib6jiwOTwRA')
-# Add data
-month = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
-         'August', 'September', 'October', 'November', 'December']
-high_2014 = [28.8, 28.5, 37.0, 56.8, 69.7, 79.7, 78.5, 77.8, 74.1, 62.6, 45.3, 39.9]
-low_2014 = [12.7, 14.3, 18.6, 35.5, 49.9, 58.0, 60.0, 58.6, 51.7, 45.2, 32.2, 29.1]
 ```
 
 *** =sample_code
 ```{python}
-# Create and style traces
 
-# trace0 is done for you
-trace0 = go.Scatter(
-    x = month,
-    y = high_2014,
-    name = 'High 2014',
-    line = dict(
-        color = ('rgb(205, 12, 24)'),
-        width = 4))
+# Create random data with numpy
+import numpy as np
 
-# fill in the blanks         
-trace1 = go.Scatter(
-    x = ___,
-    y = ___,
-    name = 'Low 2014',
-    line = dict(
-        color = ('rgb(22, 96, 167)'),
-        width = 4,))
+N = 500
+random_x = np.linspace(0, 1, N)
+random_y = np.random.randn(N)
 
-data = [trace0, trace1]
+# Create a trace
+trace = go.Scatter(
+    x = random_x,
+    y = random_y
+)
 
-# Edit the layout - nothing to do here
-layout = dict(title = 'Average High and Low Temperatures in New York',
-              xaxis = dict(title = 'Month'),
-              yaxis = dict(title = 'Temperature (degrees F)'))
+data = [trace]
 
-# Make the plot!
-fig = dict(data=data, layout=layout)
-py.plot(fig, filename='styled-line')
+py.plot(data, filename='basic-line')
+
 ```
 
 *** =solution
 ```{python}
-# Create and style traces
-trace0 = go.Scatter(
-    x = month,
-    y = high_2014,
-    name = 'High 2014',
-    line = dict(
-        color = ('rgb(205, 12, 24)'),
-        width = 4))
-        
-trace1 = go.Scatter(
-    x = month,
-    y = low_2014,
-    name = 'Low 2014',
-    line = dict(
-        color = ('rgb(22, 96, 167)'),
-        width = 4,))
+# Create random data with numpy
+import numpy as np
 
-data = [trace0, trace1]
+N = 500
+random_x = np.linspace(0, 1, N)
+random_y = np.random.randn(N)
 
-# Edit the layout
-layout = dict(title = 'Average High and Low Temperatures in New York',
-              xaxis = dict(title = 'Month'),
-              yaxis = dict(title = 'Temperature (degrees F)'))
+# Create a trace
+trace = go.Scatter(
+    x = random_x,
+    y = random_y
+)
 
-# Make the plot!
-fig = dict(data=data, layout=layout)
-py.plot(fig, filename='styled-line')
+data = [trace]
+
+py.plot(data, filename='basic-line')
 
 ```
 
 *** =sct
 ```{python}
-success_msg("Great work! Plotly makes it easy to not only visualize the temperate changes over time, but also interactively view the specific measures for each month by hovering over the plot.")
+success_msg("Great work!")
 ```
 --- type:NormalExercise lang:python xp:100 skills:2 key:8546b612c1
 ## Try them together
 
-Create the third plot
+Now we're going to try and scatter plots and line plots together! We've already created some random data for your to play around with:
 
-Hang on tight - your code may take a moment to run :)
+- `x_axis` will serve as your x-axis for each trace
+- `random_y0` will serve as data along the y-axis in `trace0`
+- `random_y1` will serve as data along the y-axis in `trace1`
+- `random_y2` will serve as data along the y-axis in `trace2`
 
 
 *** =instructions
-- Click submit answer
+- Finish the code to create `trace0` using `random_y0` 
+- Finish the code to create `trace1` using `random_y1`
+- Finish the code to create `trace2` using `random_y2`
+- Combine the data by filling in the blanks!
+- Execute the code!
+- 
 *** =hint
+- Take a look at the previous exercises for a refresher on format!
 
 *** =pre_exercise_code
 ```{python}
 import plotly.plotly as py
 import plotly.graph_objs as go
 py.sign_in('datacamp_python', '9IB7oEs6qib6jiwOTwRA')
+
+import numpy as np
+
+N = 100
+x_axis = np.linspace(0, 1, N)
+random_y0 = np.random.randn(N)+5
+random_y1 = np.random.randn(N)
+random_y2 = np.random.randn(N)-5
+
 ```
 
 *** =sample_code
 ```{python}
-# Create random data with numpy
-import numpy as np
-
-N = 100
-random_x = np.linspace(0, 1, N)
-random_y0 = np.random.randn(N)+5
-random_y1 = np.random.randn(N)
-random_y2 = np.random.randn(N)-5
-
-# Create traces
+# Create trace0
 trace0 = go.Scatter(
-    x = random_x,
-    y = random_y0,
+    x = ___,
+    y = ___,
     mode = 'lines',
     name = 'lines'
 )
+
+# Create trace1
 trace1 = go.Scatter(
-    x = random_x,
-    y = random_y1,
+    x = ___,
+    y = ___,
     mode = 'lines+markers',
     name = 'lines+markers'
 )
+
+# Create trace2
 trace2 = go.Scatter(
-    x = random_x,
-    y = random_y2,
+    x = ___,
+    y = ___,
     mode = 'markers',
     name = 'markers'
 )
-data = [trace0, trace1, trace2]
 
-py.iplot(data, filename='line-mode')
+# Fill in the blanks to combine the data and plot!
+data = [___, ___, ___]
+py.plot(data, filename='line-mode')
+
 ```
 
 *** =solution
 ```{python}
-# Create random data with numpy
-import numpy as np
-
-N = 100
-random_x = np.linspace(0, 1, N)
-random_y0 = np.random.randn(N)+5
-random_y1 = np.random.randn(N)
-random_y2 = np.random.randn(N)-5
-
-# Create traces
+# Create trace0
 trace0 = go.Scatter(
     x = random_x,
     y = random_y0,
     mode = 'lines',
     name = 'lines'
 )
+
+# Create trace1
 trace1 = go.Scatter(
     x = random_x,
     y = random_y1,
     mode = 'lines+markers',
     name = 'lines+markers'
 )
+
+# Create trace2
 trace2 = go.Scatter(
     x = random_x,
     y = random_y2,
     mode = 'markers',
     name = 'markers'
 )
+
+# Combine the data and plot!
 data = [trace0, trace1, trace2]
-
 py.plot(data, filename='line-mode')
-
 ```
 
 *** =sct
