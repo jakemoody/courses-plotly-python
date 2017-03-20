@@ -1,5 +1,5 @@
 ---
-title       : Let's try some more plots
+title       : Getting fancy with plotly
 description : More advanced plotting
 --- type:NormalExercise lang:python xp:100 skills:2 key:f2824d0db0
 ## Plotly Boxplot

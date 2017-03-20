@@ -1,6 +1,6 @@
 ---
 title       : Getting started with plotly
-description : A couple exercises to get started
+description : This chapter will introduce you to plotly and how you can use Python and plotly together to create stunning data visualizations.
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
