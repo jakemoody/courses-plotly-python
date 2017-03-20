@@ -5,7 +5,7 @@ attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:880d44e748
-## Plotly Scatter Plot
+## Plotly example
 
 This exercise features an example of plotly.
 
@@ -20,31 +20,14 @@ Hang on tight - your code may take a moment to run :)
 *** =pre_exercise_code
 ```{python}
 import plotly.plotly as py
-import plotly.graph_objs as go
+from plotly.graph_objs import Scatter
 py.sign_in('datacamp_python', '9IB7oEs6qib6jiwOTwRA')
 ```
 
 *** =sample_code
 ```{python}
-# Create random data with numpy
-import numpy as np
-
-N = 1000
-random_x = np.random.randn(N)
-random_y = np.random.randn(N)
-
-# Create a trace
-trace = go.Scatter(
-    x = random_x,
-    y = random_y,
-    mode = 'markers'
-)
-
-data = [trace]
-
-# Plot and embed in ipython notebook!
-py.iplot(data, filename='basic-scatter')
-
+x = [1, 2, 3]; y = [1, 2, 3];
+plot([Scatter(x=x, y=y, mode = 'markers')])
 ```
 
 *** =solution
@@ -56,6 +39,7 @@ py.iplot(data, filename='basic-scatter')
 ```{python}
 success_msg("Great work!")
 ```
+
 
 --- type:NormalExercise lang:python xp:100 skills:2 key:8546b612c1
 ## Plotly Line Chart
