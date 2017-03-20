@@ -1,6 +1,7 @@
 ---
 title       : Insert the chapter title here
-description : Insert the chapter description here--- type:NormalExercise lang:python xp:100 skills:2 key:f2824d0db0
+description : Insert the chapter description here
+--- type:NormalExercise lang:python xp:100 skills:2 key:f2824d0db0
 ## Plotly Boxplot
 
 Make your 3rd Plotly Plot
