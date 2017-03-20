@@ -144,7 +144,7 @@ success_msg("Great work!")
 
 Now we're going to try and scatter plots and line plots together! We've already created some random data for your to play around with:
 
-- `x_axis` will serve as your x-axis for each trace
+- `random_x` will serve as your x-axis for each trace
 - `random_y0` will serve as data along the y-axis in `trace0`
 - `random_y1` will serve as data along the y-axis in `trace1`
 - `random_y2` will serve as data along the y-axis in `trace2`
@@ -169,7 +169,7 @@ py.sign_in('datacamp_python', '9IB7oEs6qib6jiwOTwRA')
 import numpy as np
 
 N = 100
-x_axis = np.linspace(0, 1, N)
+random_x = np.linspace(0, 1, N)
 random_y0 = np.random.randn(N)+5
 random_y1 = np.random.randn(N)
 random_y2 = np.random.randn(N)-5
