@@ -20,19 +20,54 @@ Hang on tight - your code may take a moment to run :)
 *** =pre_exercise_code
 ```{python}
 import plotly.plotly as py
-from plotly.graph_objs import Scatter
+import plotly.graph_objs as go
 py.sign_in('datacamp_python', '9IB7oEs6qib6jiwOTwRA')
 ```
 
 *** =sample_code
 ```{python}
-x = [1, 2, 3]; y = [1, 2, 3];
-plot([Scatter(x=x, y=y, mode = 'markers')])
+# Create random data with numpy
+import numpy as np
+
+N = 1000
+random_x = np.random.randn(N)
+random_y = np.random.randn(N)
+
+# Create a trace
+trace = go.Scatter(
+    x = random_x,
+    y = random_y,
+    mode = 'markers'
+)
+
+data = [trace]
+
+# Plot and embed in ipython notebook!
+py.iplot(data, filename='basic-scatter')
+
 ```
 
 *** =solution
 ```{python}
-# no code
+# Create random data with numpy
+import numpy as np
+
+N = 1000
+random_x = np.random.randn(N)
+random_y = np.random.randn(N)
+
+# Create a trace
+trace = go.Scatter(
+    x = random_x,
+    y = random_y,
+    mode = 'markers'
+)
+
+data = [trace]
+
+# Plot and embed in ipython notebook!
+py.iplot(data, filename='basic-scatter')
+
 ```
 
 *** =sct
