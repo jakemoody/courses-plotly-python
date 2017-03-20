@@ -123,5 +123,58 @@ success_msg("Super!")
 
 ```
 
+--- type:NormalExercise lang:python xp:100 skills:2 key:dea4219835
+## <<<New Exercise>>>
 
 
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+```{python}
+import pandas as pd
+
+df = pd.read_csv('https://plot.ly/~etpinard/191.csv')
+
+py.plot({
+    'data': [
+        Scatter(x=df[continent+', x'],
+                y=df[continent+', y'],
+                text=df[continent+', text'],
+                marker=Marker(size=df[continent+', size'], sizemode='area', sizeref=131868,),
+                mode='markers',
+                name=continent) for continent in ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
+    ],
+    'layout': Layout(xaxis=XAxis(title='Life Expectancy'), yaxis=YAxis(title='GDP per Capita', type='log'))
+}, show_link=False)
+```
+
+*** =solution
+```{python}
+import pandas as pd
+
+df = pd.read_csv('https://plot.ly/~etpinard/191.csv')
+
+py.plot({
+    'data': [
+        Scatter(x=df[continent+', x'],
+                y=df[continent+', y'],
+                text=df[continent+', text'],
+                marker=Marker(size=df[continent+', size'], sizemode='area', sizeref=131868,),
+                mode='markers',
+                name=continent) for continent in ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
+    ],
+    'layout': Layout(xaxis=XAxis(title='Life Expectancy'), yaxis=YAxis(title='GDP per Capita', type='log'))
+}, show_link=False)
+```
+
+*** =sct
+```{python}
+
+```
