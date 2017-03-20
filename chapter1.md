@@ -174,6 +174,7 @@ py.plot(fig, filename='styled-line')
 ```{python}
 success_msg("Great work! Plotly makes it easy to not only visualize the temperate changes over time, but also interactively view the specific measures for each month by hovering over the plot.")
 ```
+
 --- type:NormalExercise lang:python xp:100 skills:2 key:8546b612c1
 ## Try them together
 
@@ -278,3 +279,74 @@ py.plot(data, filename='line-mode')
 success_msg("Looking good!")
 ```
 
+
+
+--- type:NormalExercise lang:python xp:100 skills:2 key:7a036c016a
+## Bar charts with Plotly
+
+In this exercise, you'll create 
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{python}
+import plotly.plotly as py
+import plotly.graph_objs as go
+py.sign_in('datacamp_python', '9IB7oEs6qib6jiwOTwRA')
+```
+
+*** =sample_code
+```{python}
+# Create trace
+trace0 = go.Bar(
+    x=['Marketing', 'Production', 'Finance', 'R&D', 'HR'],
+    y=[5,14,3,3,2],
+    name='Company A'
+)
+trace1 = go.Bar(
+    x=['Marketing', 'Production', 'Finance', 'R&D', 'HR'],
+    y=[2,10,3,8,1],
+    name='Company B'
+)
+
+data = [trace0, trace1]
+layout = go.Layout(
+    barmode='group'
+)
+
+fig = go.Figure(data=data, layout=layout)
+py.plot(fig, filename='grouped-bar')
+
+
+```
+
+*** =solution
+```{python}
+# Create trace
+trace0 = go.Bar(
+    x=['Marketing', 'Production', 'Finance', 'R&D', 'HR'],
+    y=[5,14,3,3,2],
+    name='Company A'
+)
+trace1 = go.Bar(
+    x=['Marketing', 'Production', 'Finance', 'R&D', 'HR'],
+    y=[2,10,3,8,1],
+    name='Company B'
+)
+
+data = [trace0, trace1]
+layout = go.Layout(
+    barmode='group'
+)
+
+fig = go.Figure(data=data, layout=layout)
+py.plot(fig, filename='grouped-bar')
+```
+
+*** =sct
+```{python}
+success_msg("Nice!")
+```
