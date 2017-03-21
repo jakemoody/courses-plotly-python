@@ -243,7 +243,7 @@ We've loaded a dataset containing US Agricultural Export data by state. This is 
 
 
 *** =hint
-- No hints! Just click submit answer.
+- Simply fill in the blanks!
 *** =pre_exercise_code
 
 ```{python}
@@ -342,6 +342,9 @@ py.plot( fig, filename='d3-cloropleth-map' )
 
 *** =sct
 ```{python}
+test_object("data",incorrect_msg = "Did you enter `type='choropleth'`?'",do_eval=False)
+test_object("layout",incorrect_msg = "Did you change the layout object?",do_eval=False)
+test_object("fig",incorrect_msg = "Did you change the fig object?",do_eval=False)
 success_msg("Awesome! Choropleth maps with Plotly can be an extremely helpful way to present your data. Let's check out the final exercise.")
 ```
 
@@ -352,8 +355,11 @@ success_msg("Awesome! Choropleth maps with Plotly can be an extremely helpful wa
 In this final exercise, we will build an interactive bubble map with Plotly showing 2014 US City Populations. The data is available in the console as `df`. 
 
 *** =instructions
+- Fill in the blank in the `dict` function wiht `'scattergeo'`
+- Fill in the blank in the `py.plot` function with `'d3-bubble-map-populations'`
 
 *** =hint
+- Simply fill in the blanks!
 
 *** =pre_exercise_code
 ```{python}
@@ -377,7 +383,7 @@ for i in range(len(limits)):
     lim = limits[i]
     df_sub = df[lim[0]:lim[1]]
     city = dict(
-        type = 'scattergeo',
+        type = ___, # fill in the blank
         locationmode = 'USA-states',
         lon = df_sub['lon'],
         lat = df_sub['lat'],
@@ -407,7 +413,7 @@ layout = dict(
     )
 
 fig = dict( data=cities, layout=layout )
-py.plot( fig, validate=False, filename='d3-bubble-map-populations' )
+py.plot( fig, validate=False, filename=___ ) # fill in the blank
 ```
 
 *** =solution
@@ -459,5 +465,6 @@ py.plot( fig, validate=False, filename='d3-bubble-map-populations' )
 
 *** =sct
 ```{python}
+test_object("data",incorrect_msg = "Did you enter `type='choropleth'`?'",do_eval=False)
 success_msg("Congrats! You just completed the last exercises of our Plotly tutorial. We hope we inspired you to consider Plotly for your next visualization task! You can read their documentation in more depth at https://plot.ly/python")
 ```
