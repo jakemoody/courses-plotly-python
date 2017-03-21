@@ -278,16 +278,15 @@ py.plot(data, filename='line-mode')
 ```{python}
 success_msg("Looking good!")
 ```
-
-
-
 --- type:NormalExercise lang:python xp:100 skills:2 key:7a036c016a
 ## Bar charts with Plotly
 
-In this exercise, you'll create 
+Let's try one more plot before we finish the chapter! In this exercise you want to compare 2 companies, Company A and Company B. Specifically, you want to compare the headcount by department of each organization. A bar chart is a great way to do this! The traces are already created for you. Simply fill in the blanks toward the end of the code to combine the data and create the plot.
 
 
 *** =instructions
+- Fill in the blanks to combine the traces into the `data` object
+- Fill in the blanks to create the `fig` object
 
 *** =hint
 
@@ -338,13 +337,13 @@ trace1 = go.Bar(
     name='Company B'
 )
 
-# Combine data and plot!
-data = [trace0, trace1]
+# Fill in the blanks to combine the data and make the plot
+data = [___, ___]
 layout = go.Layout(
     barmode='group'
 )
 
-fig = go.Figure(data=data, layout=layout)
+fig = go.Figure(data=___, layout=___)
 py.plot(fig, filename='grouped-bar')
 ```
 
