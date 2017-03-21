@@ -8,7 +8,7 @@ description : More advanced plotting
 In this exercise you will create a boxplot! Actually, you will create a couple different versions using the same data, `boxplot_data` which is preloaded in the console. We will create four versions of the boxplot: one with all the points, one with only the whiskers, one with suspected outliers, and one with whiskers and outliers. In order to get this variety, you need to change the `boxpoints` argument in the `go.Box()` functions to the right. 
 
 *** =instructions
-- By default `boxpoints = True` so nothing to do to trace0!
+- Set `boxpoints` equal to `'all'`
 - Set `boxpoints` equal to `False`
 - Set `boxpoints` equal to `'suspectedoutliers'`
 - Set `boxpoints` equal to `'outliers'`
@@ -33,7 +33,7 @@ trace0 = go.Box(
     name = "All Points",
     jitter = 0.3,
     pointpos = -1.8,
-    boxpoints = 'all',
+    boxpoints = ___,
     marker = dict(
         color = 'rgb(7,40,89)'),
     line = dict(
