@@ -235,10 +235,12 @@ success_msg("Nice! You just created a 3D plot using Plotly! Let's keeping going 
 
 Choropleth maps are a create way to visualize data in different regions whether it be countys, states, courntries or more. Plotly adds additional value to this style by allowing you to interactively view data for each region by simply by hovering over the space on the map. 
 
-We've loaded a dataset containing US Agricultural Export data by state. This is available in the console as `df`. 
+We've loaded a dataset containing US Agricultural Export data by state. This is available in the console as `df`.
 
 *** =instructions
-- Click submit answer to execute the code
+- In the `dict()` function, fill in the blank with `'choropleth'`
+- Fill in the blank in the `py.plot` function with `'d3-cloropleth-map'`
+
 
 *** =hint
 - No hints! Just click submit answer.
@@ -266,7 +268,7 @@ df['text'] = df['state'] + '<br>' +\
     'Wheat '+df['wheat']+' Corn '+df['corn']
 
 data = [ dict(
-        type='choropleth',
+        type=___, # fill in the blank
         colorscale = scl,
         autocolorscale = False,
         locations = df['code'],
@@ -291,8 +293,8 @@ layout = dict(
             lakecolor = 'rgb(255, 255, 255)'),
              )
 
-fig = dict( data=data, layout=layout )
-py.plot(fig, filename='d3-cloropleth-map' )
+fig = dict( data=data, layout=layout)
+py.plot(fig, filename=___ ) # fill in the blank
 ```
 
 *** =solution
