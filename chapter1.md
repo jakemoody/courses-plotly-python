@@ -72,8 +72,8 @@ py.plot(data, filename='basic-scatter')
 
 *** =sct
 ```{python}
-test_object("data",incorrect_msg = "Are you sure you didn't change the data object?")
-test_function("py.plot",incorrect_msg = "Are you sure you used the py.plot function?")
+test_object("data")
+test_function("py.plot")
 success_msg("Great work! Plotly plots are interactive, so make sure you play around with the scatter plot you produced!")
 ```
 --- type:NormalExercise lang:python xp:100 skills:2 key:5e407595b2
