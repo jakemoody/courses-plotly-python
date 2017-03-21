@@ -15,14 +15,13 @@ In this exercise you will create a boxplot! Actually, you will create a couple d
 - Combine the trace objects to create the `data` object by filling in the blanks
 
 *** =hint
-
+- Simply fill in the blanks using the instructions! 
 *** =pre_exercise_code
 ```{python}
 import plotly.plotly as py
 import plotly.graph_objs as go
 py.sign_in('datacamp_python', '9IB7oEs6qib6jiwOTwRA')
 boxplot_data = [0.75, 5.25, 5.5, 6, 6.2, 6.6, 6.80, 7.0, 7.2, 7.5, 7.5, 7.75, 8.15, 8.15, 8.65, 8.93, 9.2, 9.5, 10, 10.25, 11.5, 12, 16, 20.90, 22.3, 23.25]
-
 ```
 
 *** =sample_code
@@ -153,10 +152,86 @@ test_object("trace1",incorrect_msg = "Did you assign the correct value to the bo
 test_object("trace2",incorrect_msg = "Did you assign the correct value to the boxpoints argument?",do_eval=False)
 test_object("trace3",incorrect_msg = "Did you assign the correct value to the boxpoints argument?",do_eval=False)
 test_object("data",incorrect_msg = "Did you assign the correct values to the data object?",do_eval=False)
-success_msg("Super!")
+success_msg("Super! Now you're getting the hang out it!")
+```
+
+
+--- type:NormalExercise lang:python xp:100 skills:2 key:c6553f5c85
+## Mapping Mt. Bruno
+
+In this exercise we will visualize elavation data with Plotly! The data for Mt. Bruno is preloaded in the console as `z_data`. 
+All you need to do is fill in the blanks and execute the code. 
+
+*** =instructions
+- Fill in the blanks to create the `fig` object. 
+
+*** =hint
+- Look at the Plotly documentation or check previous exercises if you forget the syntax. 
+
+*** =pre_exercise_code
+```{python}
+import plotly.plotly as py
+import plotly.graph_objs as go
+py.sign_in('datacamp_python', '9IB7oEs6qib6jiwOTwRA')
+import pandas as pd
+# Read data from a csv
+z_data = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/api_docs/mt_bruno_elevation.csv')
+
+```
+
+*** =sample_code
+```{python}
+data = [
+    go.Surface(
+        z=z_data.as_matrix()
+    )
+]
+layout = go.Layout(
+    title='Mt Bruno Elevation',
+    autosize=False,
+    width=500,
+    height=500,
+    margin=dict(
+        l=65,
+        r=50,
+        b=65,
+        t=90
+    )
+)
+fig = go.Figure(data=___, layout=___)
+py.plot(fig, filename='elevations-3d-surface')
+```
+
+*** =solution
+```{python}
+data = [
+    go.Surface(
+        z=z_data.as_matrix()
+    )
+]
+layout = go.Layout(
+    title='Mt Bruno Elevation',
+    autosize=False,
+    width=500,
+    height=500,
+    margin=dict(
+        l=65,
+        r=50,
+        b=65,
+        t=90
+    )
+)
+fig = go.Figure(data=data, layout=layout)
+py.plot(fig, filename='elevations-3d-surface')
+```
+
+*** =sct
+```{python}
+test_object("fig",incorrect_msg = "Did you assign the correct values to the fig object?",do_eval=False)
+success_msg("Nice! You just created a 3D plot using Plotly! Let's keeping going with the next exercises!")
 ```
 --- type:NormalExercise lang:python xp:100 skills:2 key:f2824d0db0
-## Plotly Boxplot
+## 
 
 
 
