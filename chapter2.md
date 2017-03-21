@@ -231,31 +231,29 @@ test_object("fig",incorrect_msg = "Did you assign the correct values to the fig 
 success_msg("Nice! You just created a 3D plot using Plotly! Let's keeping going with the next exercises!")
 ```
 --- type:NormalExercise lang:python xp:100 skills:2 key:f2824d0db0
-## 
+## Building a choropleth map with Plotly
 
+Choropleth maps are a create way to visualize data in different regions whether it be countys, states, courntries or more. Plotly adds additional value to this style by allowing you to interactively view data for each region by simply by hovering over the space on the map. 
 
-
-
+We've loaded a dataset containing US Agricultural Export data by state. This is available in the console as `df`. 
 
 *** =instructions
-- Click submit answer
+- Click submit answer to execute the code
 
 *** =hint
-- No hints!
+- No hints! Just click submit answer.
 *** =pre_exercise_code
 
 ```{python}
 import plotly.plotly as py
 from plotly.graph_objs import *
 py.sign_in('datacamp_python', '9IB7oEs6qib6jiwOTwRA')
+import pandas as pd
+df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv')
 ```
 
 *** =sample_code
 ```{python}
-import pandas as pd
-
-df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv')
-
 for col in df.columns:
     df[col] = df[col].astype(str)
 
@@ -294,17 +292,11 @@ layout = dict(
              )
 
 fig = dict( data=data, layout=layout )
-py.plot( fig, filename='d3-cloropleth-map' )
+py.plot(fig, filename='d3-cloropleth-map' )
 ```
 
 *** =solution
 ```{python}
-import plotly.plotly as py
-from plotly.graph_objs import *
-import pandas as pd
-
-df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv')
-
 for col in df.columns:
     df[col] = df[col].astype(str)
 
@@ -348,6 +340,122 @@ py.plot( fig, filename='d3-cloropleth-map' )
 
 *** =sct
 ```{python}
-success_msg("Super!")
+success_msg("Awesome! Choropleth maps with Plotly can be an extremely helpful way to present your data. Let's check out the final exercise.")
+```
 
+
+--- type:NormalExercise lang:python xp:100 skills:2 key:e5eb0920aa
+## 2014 US City Populations
+
+In this final exercise, we will build an interactive bubble map with Plotly showing 2014 US City Populations. The data is available in the console as `df`. 
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{python}
+import plotly.plotly as py
+import pandas as pd
+py.sign_in('datacamp_python', '9IB7oEs6qib6jiwOTwRA')
+df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/2014_us_cities.csv')
+```
+
+*** =sample_code
+```{python}
+df.head()
+
+df['text'] = df['name'] + '<br>Population ' + (df['pop']/1e6).astype(str)+' million'
+limits = [(0,2),(3,10),(11,20),(21,50),(50,3000)]
+colors = ["rgb(0,116,217)","rgb(255,65,54)","rgb(133,20,75)","rgb(255,133,27)","lightgrey"]
+cities = []
+scale = 5000
+
+for i in range(len(limits)):
+    lim = limits[i]
+    df_sub = df[lim[0]:lim[1]]
+    city = dict(
+        type = 'scattergeo',
+        locationmode = 'USA-states',
+        lon = df_sub['lon'],
+        lat = df_sub['lat'],
+        text = df_sub['text'],
+        marker = dict(
+            size = df_sub['pop']/scale,
+            color = colors[i],
+            line = dict(width=0.5, color='rgb(40,40,40)'),
+            sizemode = 'area'
+        ),
+        name = '{0} - {1}'.format(lim[0],lim[1]) )
+    cities.append(city)
+
+layout = dict(
+        title = '2014 US city populations<br>(Click legend to toggle traces)',
+        showlegend = True,
+        geo = dict(
+            scope='usa',
+            projection=dict( type='albers usa' ),
+            showland = True,
+            landcolor = 'rgb(217, 217, 217)',
+            subunitwidth=1,
+            countrywidth=1,
+            subunitcolor="rgb(255, 255, 255)",
+            countrycolor="rgb(255, 255, 255)"
+        ),
+    )
+
+fig = dict( data=cities, layout=layout )
+py.plot( fig, validate=False, filename='d3-bubble-map-populations' )
+```
+
+*** =solution
+```{python}
+df.head()
+
+df['text'] = df['name'] + '<br>Population ' + (df['pop']/1e6).astype(str)+' million'
+limits = [(0,2),(3,10),(11,20),(21,50),(50,3000)]
+colors = ["rgb(0,116,217)","rgb(255,65,54)","rgb(133,20,75)","rgb(255,133,27)","lightgrey"]
+cities = []
+scale = 5000
+
+for i in range(len(limits)):
+    lim = limits[i]
+    df_sub = df[lim[0]:lim[1]]
+    city = dict(
+        type = 'scattergeo',
+        locationmode = 'USA-states',
+        lon = df_sub['lon'],
+        lat = df_sub['lat'],
+        text = df_sub['text'],
+        marker = dict(
+            size = df_sub['pop']/scale,
+            color = colors[i],
+            line = dict(width=0.5, color='rgb(40,40,40)'),
+            sizemode = 'area'
+        ),
+        name = '{0} - {1}'.format(lim[0],lim[1]) )
+    cities.append(city)
+
+layout = dict(
+        title = '2014 US city populations<br>(Click legend to toggle traces)',
+        showlegend = True,
+        geo = dict(
+            scope='usa',
+            projection=dict( type='albers usa' ),
+            showland = True,
+            landcolor = 'rgb(217, 217, 217)',
+            subunitwidth=1,
+            countrywidth=1,
+            subunitcolor="rgb(255, 255, 255)",
+            countrycolor="rgb(255, 255, 255)"
+        ),
+    )
+
+fig = dict( data=cities, layout=layout )
+py.plot( fig, validate=False, filename='d3-bubble-map-populations' )
+```
+
+*** =sct
+```{python}
+success_msg("Congrats! You just completed the last exercises of our Plotly tutorial. We hope we inspired you to consider Plotly for your next visualization task! You can read their documentation in more depth at https://plot.ly/python")
 ```
