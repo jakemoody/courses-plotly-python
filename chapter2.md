@@ -153,7 +153,7 @@ test_object("trace1",incorrect_msg = "Did you assign the correct value to the bo
 test_object("trace2",incorrect_msg = "Did you assign the correct value to the boxpoints argument?",do_eval=False)
 test_object("trace3",incorrect_msg = "Did you assign the correct value to the boxpoints argument?",do_eval=False)
 test_object("data",incorrect_msg = "Did you assign the correct values to the data object?",do_eval=False)
-success_msg("success_msg("Super!")")
+success_msg("Super!")
 ```
 --- type:NormalExercise lang:python xp:100 skills:2 key:f2824d0db0
 ## Plotly Boxplot
