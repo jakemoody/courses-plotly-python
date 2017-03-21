@@ -281,11 +281,10 @@ py.plot(data, filename='line-mode')
 
 *** =sct
 ```{python}
-test_object("trace0",incorrect_msg = "Did you use random_y0 to create the trace0 object?")
-test_object("trace1",incorrect_msg = "Did you use random_y1 to create the trace0 object?")
-test_object("trace2",incorrect_msg = "Did you use random_y2 to create the trace0 object?")
-test_object("data",incorrect_msg = "Double check your data object!")
-test_function("py.plot",incorrect_msg = "Are you sure you used the py.plot function?")
+test_object("trace0",incorrect_msg = "Did you use random_y0 to create the trace0 object?",do_eval=False)
+test_object("trace1",incorrect_msg = "Did you use random_y1 to create the trace0 object?",do_eval=False)
+test_object("trace2",incorrect_msg = "Did you use random_y2 to create the trace0 object?",do_eval=False)
+test_object("data",incorrect_msg = "Double check your data object!",do_eval=False)
 success_msg("Looking good!")
 ```
 --- type:NormalExercise lang:python xp:100 skills:2 key:7a036c016a
