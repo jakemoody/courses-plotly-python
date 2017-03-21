@@ -73,6 +73,7 @@ py.plot(data, filename='basic-scatter')
 *** =sct
 ```{python}
 test_object("data", do_eval=False)
+test_function("py.plot")
 success_msg("Great work! Plotly plots are interactive, so make sure you play around with the scatter plot you produced!")
 ```
 --- type:NormalExercise lang:python xp:100 skills:2 key:5e407595b2
@@ -173,10 +174,10 @@ py.plot(fig, filename='styled-line')
 
 *** =sct
 ```{python}
-test_object("trace0",incorrect_msg = "Are you sure you didn't change the trace0 object?")
-test_object("trace1",incorrect_msg = "Did you use low_2014 to create the trace1 object?")
-test_object("data",incorrect_msg = "Are you sure you didn't change the data object?")
-test_object("layout",incorrect_msg = "Are you sure you didn't change the layout object?")
+test_object("trace0",incorrect_msg = "Are you sure you didn't change the trace0 object?",do_eval=False)
+test_object("trace1",incorrect_msg = "Did you use low_2014 to create the trace1 object?",do_eval=False)
+test_object("data",incorrect_msg = "Are you sure you didn't change the data object?",do_eval=False)
+test_object("layout",incorrect_msg = "Are you sure you didn't change the layout object?",do_eval=False)
 test_function("py.plot",incorrect_msg = "Are you sure you used the py.plot function?")
 success_msg("Great work! Plotly makes it easy to not only visualize the temperate changes over time, but also interactively view the specific measures for each month by hovering over the plot.")
 ```
@@ -360,10 +361,10 @@ py.plot(fig, filename='grouped-bar')
 
 *** =sct
 ```{python}
-test_object("trace1",incorrect_msg = "Did you change the trace0 object?")
-test_object("trace2",incorrect_msg = "Did you chance the trace1 object?")
-test_object("data",incorrect_msg = "Double check your data object!")
-test_object("fig",incorrect_msg = "Double check your fig object!")
+test_object("trace1",incorrect_msg = "Did you change the trace0 object?",do_eval=False)
+test_object("trace2",incorrect_msg = "Did you chance the trace1 object?",do_eval=False)
+test_object("data",incorrect_msg = "Double check your data object!",do_eval=False)
+test_object("fig",incorrect_msg = "Double check your fig object!",do_eval=False)
 test_function("py.plot",incorrect_msg = "Are you sure you used the py.plot function?")
 
 success_msg("Nice!")
