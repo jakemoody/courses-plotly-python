@@ -465,6 +465,7 @@ py.plot( fig, validate=False, filename='d3-bubble-map-populations' )
 
 *** =sct
 ```{python}
-test_object("data",incorrect_msg = "Did you enter `type='choropleth'`?'",do_eval=False)
+test_object("cities",incorrect_msg = "Did you enter `type='choropleth'`?'",do_eval=False)
+test_object("layout",incorrect_msg = "Did you change the `layout` object?'",do_eval=False)
 success_msg("Congrats! You just completed the last exercises of our Plotly tutorial. We hope we inspired you to consider Plotly for your next visualization task! You can read their documentation in more depth at https://plot.ly/python")
 ```
