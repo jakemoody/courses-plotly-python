@@ -312,6 +312,7 @@ trace1 = go.Bar(
     name='Company B'
 )
 
+# Combine data and plot!
 data = [trace0, trace1]
 layout = go.Layout(
     barmode='group'
@@ -337,6 +338,7 @@ trace1 = go.Bar(
     name='Company B'
 )
 
+# Combine data and plot!
 data = [trace0, trace1]
 layout = go.Layout(
     barmode='group'
