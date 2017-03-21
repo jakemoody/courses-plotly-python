@@ -358,8 +358,8 @@ py.plot(fig, filename='grouped-bar')
 
 *** =sct
 ```{python}
-test_object("trace1",incorrect_msg = "Did you change the trace0 object?",do_eval=False)
-test_object("trace2",incorrect_msg = "Did you chance the trace1 object?",do_eval=False)
+test_object("trace0",incorrect_msg = "Did you change the trace0 object?",do_eval=False)
+test_object("trace1",incorrect_msg = "Did you chance the trace1 object?",do_eval=False)
 test_object("data",incorrect_msg = "Double check your data object!",do_eval=False)
 test_object("fig",incorrect_msg = "Double check your fig object!",do_eval=False)
 success_msg("Nice!")
