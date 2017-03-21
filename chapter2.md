@@ -176,5 +176,6 @@ py.plot({
 
 *** =sct
 ```{python}
-
+test_object()
+success_msg("Great job! Let's try some more plots in the next chapter!")
 ```

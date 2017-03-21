@@ -7,7 +7,7 @@ attachments :
 --- type:NormalExercise lang:python xp:100 skills:1 key:880d44e748
 ## Let's start with a scatter plot
 
-This exercise features an example of plotly.
+This exercise features an example of Plotly. We'll start by using Numpy to create some random data. Then, we'll plot the data as a scatter plot. Since this is the first exercise, we'll do most of the work :) Simply execute the code.
 
 Hang on tight - your code may take a moment to run :)
 
@@ -42,7 +42,7 @@ trace = go.Scatter(
 
 data = [trace]
 
-# Plot and embed in ipython notebook!
+# Plot the data as a scatter plot!
 py.plot(data, filename='basic-scatter')
 
 ```
@@ -65,13 +65,14 @@ trace = go.Scatter(
 
 data = [trace]
 
-# Plot and embed in ipython notebook!
+# Plot the data as a scatter plot!
 py.plot(data, filename='basic-scatter')
 
 ```
 
 *** =sct
 ```{python}
+test_object()
 success_msg("Great work!")
 ```
 --- type:NormalExercise lang:python xp:100 skills:2 key:5e407595b2
