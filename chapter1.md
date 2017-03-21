@@ -320,13 +320,13 @@ trace1 = go.Bar(
     name='Company B'
 )
 
-# Combine data and plot!
-data = [trace0, trace1]
+# Fill in the blanks to combine the data and make the plot
+data = [___, ___]
 layout = go.Layout(
     barmode='group'
 )
 
-fig = go.Figure(data=data, layout=layout)
+fig = go.Figure(data=___, layout=___)
 py.plot(fig, filename='grouped-bar')
 
 
@@ -346,13 +346,13 @@ trace1 = go.Bar(
     name='Company B'
 )
 
-# Fill in the blanks to combine the data and make the plot
-data = [___, ___]
+# Combine data and plot!
+data = [trace0, trace1]
 layout = go.Layout(
     barmode='group'
 )
 
-fig = go.Figure(data=___, layout=___)
+fig = go.Figure(data=data, layout=layout)
 py.plot(fig, filename='grouped-bar')
 ```
 
@@ -360,6 +360,7 @@ py.plot(fig, filename='grouped-bar')
 ```{python}
 test_object("trace1",incorrect_msg = "Did you change the trace0 object?",do_eval=False)
 test_object("trace2",incorrect_msg = "Did you chance the trace1 object?",do_eval=False)
+test_object("data",incorrect_msg = "Double check your data object!",do_eval=False)
 test_object("fig",incorrect_msg = "Double check your fig object!",do_eval=False)
 success_msg("Nice!")
 ```
