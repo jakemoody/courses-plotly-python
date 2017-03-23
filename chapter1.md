@@ -95,7 +95,7 @@ success_msg("Great work! Plotly plots are interactive, so make sure you play aro
 --- type:NormalExercise lang:python xp:100 skills:2 key:5e407595b2
 ## Temperature highs and lows
 
-Alright now it's time to learn by doing! In this exerise you will be challenged to create a Plotly line chart showing Avg. Temperature Highs and Lows in New York throughout 2014. The following data is already available in your environment:
+Alright now it's time to learn by doing! In this exerise you will be challenged to create a Plotly line chart showing average temperature highs and lows in New York throughout 2014. The following data is already available in your environment:
 
 - `month`, contains each month
 - `high_2014`, contains the average high temperature for each month
