@@ -102,7 +102,7 @@ Alright now it's time to learn by doing! In this exerise you will be challenged 
 - `high_2014`, contains the average high temperature for each month
 - `low_2014`, contains the average low temperature for each month
 
-We've also preloaded Plotly in the console. To begin, we need to first create traces for our data. Traces define and format the data that will ultimately be plotted. The first trace, `trace0`, has been created for you. Let's break it down; To create this trace we defined the x-axis as our `month` object, the y-axis as our `high_2014` object, we named the trace 'High 2014', we determined that we wanted the line to be a certain color and width. 
+We've also preloaded Plotly in the console. To begin, we need to first create traces for our data. Traces define and format the data that will ultimately be plotted. The first trace, `trace0`, has been created for you. Let's break it down; To create this trace we used the `go.Scatter()` function which is used to create a trace for a scatter plot. In this function we defined the x-axis as our `month` object, the y-axis as our `high_2014` object, we named the trace 'High 2014', we determined that we wanted the line to be a certain color and width. 
 
 Now it's your turn! Follow the instructions to complete the code and run the exercise to produce the plot!
 
@@ -284,11 +284,15 @@ success_msg("Looking good!")
 --- type:NormalExercise lang:python xp:100 skills:2 key:7a036c016a
 ## Bar charts with Plotly
 
-Let's try one more plot before we finish the chapter! In this exercise you want to compare 2 companies, Company A and Company B. Specifically, you want to compare the headcount by department of each organization. A bar chart is a great way to do this! The traces are already created for you. Simply fill in the blanks toward the end of the code to combine the data and create the plot.
+Let's try one more plot before we finish the chapter! In this exercise you want to compare 2 companies, Company A and Company B. Specifically, you want to compare the headcount by department of each organization. A bar chart is a great way to do this! 
+
+In this exercise, we will create two traces using the `go.Bar()` function. Similiar to the `go.Scatter()` function from the previous exercises, we will need to define `x` and `y` in the function. We will also want to define a `name` ('Company A' or 'Company B') for each trace since we are creating a grouped bar chart. The data you need is prelaoded in the console. The `departments` will serve as your x-axis. The `headcount_company_a` and `headcount_company_b` objects show the headcount numbers by department for each organization. 
 
 
 *** =instructions
-- Fill in the blanks to combine the traces into the `data` object
+- Create `trace0` using the objects available in the console and the information provided above
+- Create `trace1` using the objects available in the console and the information provided above
+- Combine `trace0` and `trace1` to create the `data` object
 - Fill in the blanks to create the `fig` object
 
 *** =hint
@@ -298,24 +302,22 @@ Let's try one more plot before we finish the chapter! In this exercise you want 
 import plotly.plotly as py
 import plotly.graph_objs as go
 py.sign_in('datacamp_python', '9IB7oEs6qib6jiwOTwRA')
+
+departments = ['Marketing', 'Production', 'Finance', 'R&D', 'HR']
+headcount_company_a = [5,14,3,3,2]
+headcount_company_b = [2,10,3,8,1]
 ```
 
 *** =sample_code
 ```{python}
-# Create trace
-trace0 = go.Bar(
-    x=['Marketing', 'Production', 'Finance', 'R&D', 'HR'],
-    y=[5,14,3,3,2],
-    name='Company A'
-)
-trace1 = go.Bar(
-    x=['Marketing', 'Production', 'Finance', 'R&D', 'HR'],
-    y=[2,10,3,8,1],
-    name='Company B'
-)
+# Create trace0
+
+# Create trace1
 
 # Fill in the blanks to combine the data and make the plot
 data = [___, ___]
+
+# Create the layout
 layout = go.Layout(
     barmode='group'
 )
