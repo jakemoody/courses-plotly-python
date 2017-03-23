@@ -7,10 +7,12 @@ attachments :
 --- type:NormalExercise lang:python xp:100 skills:1 key:880d44e748
 ## Let's start with a scatter plot
 
-This exercise features an example of Plotly. The first thing we need to do is import the Plotly python library. 
+This exercise features an example of Plotly. The first thing we need to do is import the Plotly python library. Take a look how it's done in script on the right.
+
 ```
-
-
+import plotly.plotly as py
+import plotly.graph_objs as go
+```
 
 Next, we'll use Numpy to create some random data. Then, we'll plot the data as a scatter plot. Since this is the first exercise, we'll do most of the work :) Simply execute the code.
 
