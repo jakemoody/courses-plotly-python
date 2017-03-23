@@ -239,7 +239,7 @@ We've loaded a dataset containing US Agricultural Export data by state. This is 
 
 *** =instructions
 - In the `dict()` function, fill in the blank with `'choropleth'`
-- Fill in the blank in the `py.plot` function with `'d3-cloropleth-map'`
+- Fill in the blank in the `py.plot` function with `'d3-choropleth-map'`
 
 
 *** =hint
@@ -337,7 +337,7 @@ layout = dict(
              )
 
 fig = dict( data=data, layout=layout )
-py.plot( fig, filename='d3-cloropleth-map' )
+py.plot( fig, filename='d3-choropleth-map' )
 ```
 
 *** =sct
@@ -355,7 +355,7 @@ success_msg("Awesome! Choropleth maps with Plotly can be an extremely helpful wa
 In this final exercise, we will build an interactive bubble map with Plotly showing 2014 US City Populations. The data is available in the console as `df`. 
 
 *** =instructions
-- Fill in the blank in the `dict` function wiht `'scattergeo'`
+- Fill in the blank in the `dict` function with `'scattergeo'`
 - Fill in the blank in the `py.plot` function with `'d3-bubble-map-populations'`
 
 *** =hint
