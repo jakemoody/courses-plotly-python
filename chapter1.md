@@ -7,19 +7,21 @@ attachments :
 --- type:NormalExercise lang:python xp:100 skills:1 key:880d44e748
 ## Let's start with a scatter plot
 
-This exercise features an example of Plotly. The first thing we need to do is import the Plotly python library. Take a look how it's done in script on the right.
+This exercise features an example of Plotly. The first thing we need to do is import the Plotly python library. Here's how it should look:
 
 ```
 import plotly.plotly as py
 import plotly.graph_objs as go
 ```
 
-Next, we'll use Numpy to create some random data. Then, we'll plot the data as a scatter plot. Since this is the first exercise, we'll do most of the work :) Simply execute the code.
+Next, we'll use Numpy to create some random data. Then, we'll plot the data as a scatter plot. Since this is the first exercise, we'll do most of the work :) Just import the library and finish the `py.plot` function at the end to create a scatter plot. 
 
-Hang on tight - your code may take a moment to run :)
+
 
 *** =instructions
-- Just hit submit answer
+- Fill in the blanks to import `plotly.plotly` as `py`
+- Fill in the blanks to import `plotly.graph_objs` as `go`
+- Finish the `py.plot` function by inserting `'basic-scatter'` as the filename. 
 
 *** =hint
 - No hints!
@@ -34,8 +36,8 @@ py.sign_in('datacamp_python', '9IB7oEs6qib6jiwOTwRA')
 *** =sample_code
 ```{python}
 # Import plotly
-import plotly.plotly as py
-import plotly.graph_objs as go
+import plotly.plotly ___ py ___
+import ___ as ___
 
 # Create random data with numpy
 import numpy as np
@@ -54,7 +56,7 @@ trace = go.Scatter(
 data = [trace]
 
 # Plot the data as a scatter plot!
-py.plot(data, filename='basic-scatter')
+py.plot(data, filename=___)
 
 ```
 
