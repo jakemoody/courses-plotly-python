@@ -7,7 +7,12 @@ attachments :
 --- type:NormalExercise lang:python xp:100 skills:1 key:880d44e748
 ## Let's start with a scatter plot
 
-This exercise features an example of Plotly. We'll start by using Numpy to create some random data. Then, we'll plot the data as a scatter plot. Since this is the first exercise, we'll do most of the work :) Simply execute the code.
+This exercise features an example of Plotly. The first thing we need to do is import the Plotly python library. 
+```
+
+
+
+Next, we'll use Numpy to create some random data. Then, we'll plot the data as a scatter plot. Since this is the first exercise, we'll do most of the work :) Simply execute the code.
 
 Hang on tight - your code may take a moment to run :)
 
@@ -26,6 +31,10 @@ py.sign_in('datacamp_python', '9IB7oEs6qib6jiwOTwRA')
 
 *** =sample_code
 ```{python}
+# Import plotly
+import plotly.plotly as py
+import plotly.graph_objs as go
+
 # Create random data with numpy
 import numpy as np
 
@@ -49,6 +58,10 @@ py.plot(data, filename='basic-scatter')
 
 *** =solution
 ```{python}
+# Import plotly
+import plotly.plotly as py
+import plotly.graph_objs as go
+
 # Create random data with numpy
 import numpy as np
 
