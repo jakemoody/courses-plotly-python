@@ -91,7 +91,7 @@ py.plot(data, filename='basic-scatter')
 ```{python}
 test_object("data", do_eval=False)
 test_function("py.plot", do_eval=False)
-success_msg("Great work! Plotly plots are interactive, so make sure you play around with the scatter plot you produced!")
+success_msg("Great work! Plotly plots are interactive, so make sure you play around with the scatter plot you produced! We will load the library for you in the rest of the exercises so you can focus on the code!")
 ```
 --- type:NormalExercise lang:python xp:100 skills:2 key:5e407595b2
 ## Temperature highs and lows
@@ -203,11 +203,10 @@ Now we're going to try and scatter plots and line plots together! We've already 
 
 
 *** =instructions
-- Finish the code to create `trace0` using `random_y0` 
-- Finish the code to create `trace1` using `random_y1`
-- Finish the code to create `trace2` using `random_y2`
-- Combine the data by filling in the blanks!
-- Execute the code!
+- Finish `trace0` using the objects stated above. 
+- Create `trace1`. The `mode` and `name` arument should be 'lines+markers'
+- Create `trace2`. The `mode` and `name` arument should be 'markers'
+- Combine the traces to create a `data` object. 
 *** =hint
 - Take a look at the previous exercises for a refresher on format!
 
@@ -235,22 +234,6 @@ trace0 = go.Scatter(
     y = ___,
     mode = 'lines',
     name = 'lines'
-)
-
-# Create trace1
-trace1 = go.Scatter(
-    x = ___,
-    y = ___,
-    mode = 'lines+markers',
-    name = 'lines+markers'
-)
-
-# Create trace2
-trace2 = go.Scatter(
-    x = ___,
-    y = ___,
-    mode = 'markers',
-    name = 'markers'
 )
 
 # Fill in the blanks to combine the data and plot!
