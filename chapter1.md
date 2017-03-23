@@ -90,6 +90,7 @@ py.plot(data, filename='basic-scatter')
 *** =sct
 ```{python}
 test_object("data", do_eval=False)
+test_function("py.plot", do_eval=False)
 success_msg("Great work! Plotly plots are interactive, so make sure you play around with the scatter plot you produced!")
 ```
 --- type:NormalExercise lang:python xp:100 skills:2 key:5e407595b2
@@ -107,16 +108,20 @@ Now it's your turn! Follow the instructions to complete the code and run the exe
 
 *** =instructions
 - `trace0` has been done for you!
-- Fill in the blanks to complete `trace1`. 
+- Create `trace1` using the available information. The name should be 'Low 2014', the color of the line should be defined as 'rgb(205, 12, 24)', and the width of the line should be '4'. 
 
 *** =hint
-- You'll need to input the `low_2014` object in one of the blanks. 
+- You'll need to use the `low_2014` object to create `trace1` 
 
 *** =pre_exercise_code
 ```{python}
 import plotly.plotly as py
 import plotly.graph_objs as go
 py.sign_in('datacamp_python', '9IB7oEs6qib6jiwOTwRA')
+# Edit the layout
+layout = dict(title = 'Average High and Low Temperatures in New York',
+              xaxis = dict(title = 'Month'),
+              yaxis = dict(title = 'Temperature (degrees F)'))
 # Add data
 month = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
          'August', 'September', 'October', 'November', 'December']
@@ -126,8 +131,6 @@ low_2014 = [12.7, 14.3, 18.6, 35.5, 49.9, 58.0, 60.0, 58.6, 51.7, 45.2, 32.2, 29
 
 *** =sample_code
 ```{python}
-# Create and style traces
-
 # trace0 is done for you
 trace0 = go.Scatter(
     x = month,
@@ -137,23 +140,12 @@ trace0 = go.Scatter(
         color = ('rgb(205, 12, 24)'),
         width = 4))
 
-# fill in the blanks         
-trace1 = go.Scatter(
-    x = ___,
-    y = ___,
-    name = 'Low 2014',
-    line = dict(
-        color = ('rgb(22, 96, 167)'),
-        width = 4,))
+# Create trace1       
 
-data = [trace0, trace1]
 
-# Edit the layout - nothing to do here
-layout = dict(title = 'Average High and Low Temperatures in New York',
-              xaxis = dict(title = 'Month'),
-              yaxis = dict(title = 'Temperature (degrees F)'))
 
 # Make the plot!
+data = [trace0, trace1]
 fig = dict(data=data, layout=layout)
 py.plot(fig, filename='styled-line')
 ```
