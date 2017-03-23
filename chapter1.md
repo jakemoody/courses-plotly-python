@@ -99,11 +99,13 @@ Alright now it's time to learn by doing! In this exerise you will be challenged 
 - `high_2014`, contains the average high temperature for each month
 - `low_2014`, contains the average low temperature for each month
 
-Follow the instructions to complete the code and run the exercise to produce the plot!
+We've also preloaded Plotly in the console. To begin, we need to first create traces for our data. Traces define and format the data that will ultimately be plotted. The first trace, `trace0`, has been created for you. Let's break it down; To create this trace we defined the x-axis as our `month` object, the y-axis as our `high_2014` object, we named the trace 'High 2014', we determined that we wanted the line to be a certain color and width. 
+
+Now it's your turn! Follow the instructions to complete the code and run the exercise to produce the plot!
 
 *** =instructions
-- `trace0` has been done for you
-- Fill in the blanks to complete `trace1`. Use the code used to create `trace0` as a guide. 
+- `trace0` has been done for you!
+- Fill in the blanks to complete `trace1`. 
 
 *** =hint
 - You'll need to input the `low_2014` object in one of the blanks. 
