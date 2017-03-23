@@ -228,13 +228,19 @@ random_y2 = np.random.randn(N)-5
 
 *** =sample_code
 ```{python}
-# Create trace0
+# Finish trace0
 trace0 = go.Scatter(
     x = ___,
     y = ___,
     mode = 'lines',
     name = 'lines'
 )
+
+# Create trace1
+
+
+# Create trace2
+
 
 # Fill in the blanks to combine the data and plot!
 data = [___, ___, ___]
