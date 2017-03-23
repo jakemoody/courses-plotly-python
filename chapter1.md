@@ -36,7 +36,7 @@ py.sign_in('datacamp_python', '9IB7oEs6qib6jiwOTwRA')
 *** =sample_code
 ```{python}
 # Import plotly
-import plotly.plotly ___ py ___
+import ___ as ___
 import ___ as ___
 
 # Create random data with numpy
