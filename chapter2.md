@@ -10,11 +10,13 @@ In this exercise you will create a boxplot! Actually, you will create a couple d
 
 *** =instructions
 - Create `trace1` where: 
+    -  `y = boxplot_data`
     - `name = "Only Whiskers"`
     - `boxpoints = False`
     - `marker = dict(color = 'rgb(9,56,125)')`
     - `line = dict(color = 'rgb(9,56,125)')`
 - Create `trace2` where: 
+    - `y = boxplot_data`
     - `name = "Whiskers and Outliers"`
     - `boxpoints = "outliers"`
     - `marker = dict(color = 'rgb(107,174,214)')`
