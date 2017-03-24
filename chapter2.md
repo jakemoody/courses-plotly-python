@@ -25,7 +25,7 @@ In this exercise you will create a boxplot! Actually, you will create a couple d
 - Complete the `go.Figure()` function to create the `fig` object
 
 *** =hint
-- Simply fill in the blanks using the instructions! 
+- Look at the `trace0` in the IPython Shell to view it's structure.
 *** =pre_exercise_code
 ```{python}
 import plotly.plotly as py
@@ -113,11 +113,12 @@ success_msg("Super! Now you're getting the hang out it!")
 --- type:NormalExercise lang:python xp:100 skills:2 key:c6553f5c85
 ## Mapping Mt. Bruno
 
-In this exercise we will visualize elavation data with Plotly! The data for Mt. Bruno is preloaded in the console as `z_data`. 
-All you need to do is fill in the blanks and execute the code. 
+Next, we're going to show you how you can even visualize surface data with Plotly! The data for Mt. Bruno is preloaded in the console as `z_data`. 
+In this exercise you will use the `go.Surface()` to create a trace like the previous. This time, you only need to set one argument, `z`. The `layout` object has already been created and is available in the console for you.
 
 *** =instructions
-- Fill in the blanks to create the `fig` object. 
+- Create an object `data` where the `z` arugument is equal to `z_data` as a matrix (don't forget the bracket notation!)
+- 
 
 *** =hint
 - Look at the Plotly documentation or check previous exercises if you forget the syntax. 
@@ -130,16 +131,6 @@ py.sign_in('datacamp_python', '9IB7oEs6qib6jiwOTwRA')
 import pandas as pd
 # Read data from a csv
 z_data = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/api_docs/mt_bruno_elevation.csv')
-
-```
-
-*** =sample_code
-```{python}
-data = [
-    go.Surface(
-        z=z_data.as_matrix()
-    )
-]
 layout = go.Layout(
     title='Mt Bruno Elevation',
     autosize=False,
@@ -152,35 +143,34 @@ layout = go.Layout(
         t=90
     )
 )
+```
+
+*** =sample_code
+```{python}
+# Create the data object
+
+# Fill in the blanks and plot the figure
 fig = go.Figure(data=___, layout=___)
 py.plot(fig, filename='elevations-3d-surface')
 ```
 
 *** =solution
 ```{python}
+# Create the 
 data = [
     go.Surface(
         z=z_data.as_matrix()
     )
 ]
-layout = go.Layout(
-    title='Mt Bruno Elevation',
-    autosize=False,
-    width=500,
-    height=500,
-    margin=dict(
-        l=65,
-        r=50,
-        b=65,
-        t=90
-    )
-)
+
+# Fill in the blanks and plot the figure
 fig = go.Figure(data=data, layout=layout)
 py.plot(fig, filename='elevations-3d-surface')
 ```
 
 *** =sct
 ```{python}
+test_object("data",incorrect_msg = "Did you remember to add the bracket notation around your `go.Surface()` function? ",do_eval=False)
 test_object("fig",incorrect_msg = "Did you assign the correct values to the fig object?",do_eval=False)
 success_msg("Nice! You just created a 3D plot using Plotly! Let's keeping going with the next exercises!")
 ```
