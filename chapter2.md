@@ -178,7 +178,7 @@ success_msg("Nice! You just created a 3D plot using Plotly! Let's keeping going 
 
 Choropleth maps are a create way to visualize data in different regions whether it be countys, states, courntries or more. Plotly adds additional value to this style by allowing you to interactively view data for each region by simply by hovering over the space on the map. 
 
-We've loaded a dataset containing US Agricultural Export data by state. This is available in the console as `df`.
+We've loaded a dataset containing US Agricultural Export data by state. This is available in the console as `df`. We also created the `layout` object to help get you started. You need to format the data for the Choropleth map and execute the code!
 
 *** =instructions
 - In the `dict()` function, fill in the blank with `'choropleth'`
@@ -195,10 +195,6 @@ from plotly.graph_objs import *
 py.sign_in('datacamp_python', '9IB7oEs6qib6jiwOTwRA')
 import pandas as pd
 df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv')
-```
-
-*** =sample_code
-```{python}
 for col in df.columns:
     df[col] = df[col].astype(str)
 
@@ -209,7 +205,19 @@ df['text'] = df['state'] + '<br>' +\
     'Beef '+df['beef']+' Dairy '+df['dairy']+'<br>'+\
     'Fruits '+df['total fruits']+' Veggies ' + df['total veggies']+'<br>'+\
     'Wheat '+df['wheat']+' Corn '+df['corn']
+layout = dict(
+        title = '2011 US Agriculture Exports by State<br>(Hover for breakdown)',
+        geo = dict(
+            scope='usa',
+            projection=dict( type='albers usa' ),
+            showlakes = True,
+            lakecolor = 'rgb(255, 255, 255)'),
+             )
+```
 
+*** =sample_code
+```{python}
+# Create the data object
 data = [ dict(
         type=___, # fill in the blank
         colorscale = scl,
@@ -227,32 +235,14 @@ data = [ dict(
             title = "Millions USD")
         ) ]
 
-layout = dict(
-        title = '2011 US Agriculture Exports by State<br>(Hover for breakdown)',
-        geo = dict(
-            scope='usa',
-            projection=dict( type='albers usa' ),
-            showlakes = True,
-            lakecolor = 'rgb(255, 255, 255)'),
-             )
-
+# Fill in the blank and plot the figure!
 fig = dict( data=data, layout=layout)
-py.plot(fig, filename=___ ) # fill in the blank
+py.plot(fig, filename=___ ) 
 ```
 
 *** =solution
 ```{python}
-for col in df.columns:
-    df[col] = df[col].astype(str)
-
-scl = [[0.0, 'rgb(242,240,247)'],[0.2, 'rgb(218,218,235)'],[0.4, 'rgb(188,189,220)'],\
-            [0.6, 'rgb(158,154,200)'],[0.8, 'rgb(117,107,177)'],[1.0, 'rgb(84,39,143)']]
-
-df['text'] = df['state'] + '<br>' +\
-    'Beef '+df['beef']+' Dairy '+df['dairy']+'<br>'+\
-    'Fruits '+df['total fruits']+' Veggies ' + df['total veggies']+'<br>'+\
-    'Wheat '+df['wheat']+' Corn '+df['corn']
-
+# Create the data object
 data = [ dict(
         type='choropleth',
         colorscale = scl,
@@ -270,23 +260,14 @@ data = [ dict(
             title = "Millions USD")
         ) ]
 
-layout = dict(
-        title = '2011 US Agriculture Exports by State<br>(Hover for breakdown)',
-        geo = dict(
-            scope='usa',
-            projection=dict( type='albers usa' ),
-            showlakes = True,
-            lakecolor = 'rgb(255, 255, 255)'),
-             )
-
+# Plot the figure!
 fig = dict( data=data, layout=layout )
-py.plot( fig, filename='d3-choropleth-map' )
+py.plot( fig, filename='d3-choropleth-map')
 ```
 
 *** =sct
 ```{python}
 test_object("data",incorrect_msg = "Did you enter `type='choropleth'`?'",do_eval=False)
-test_object("layout",incorrect_msg = "Did you change the layout object?",do_eval=False)
 test_object("fig",incorrect_msg = "Did you change the fig object?",do_eval=False)
 success_msg("Awesome! Choropleth maps with Plotly can be an extremely helpful way to present your data. Let's check out the final exercise.")
 ```
