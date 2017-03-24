@@ -5,13 +5,20 @@ description : More advanced plotting
 --- type:NormalExercise lang:python xp:100 skills:2 key:dea4219835
 ## Boxplots with Plotly
 
-In this exercise you will create a boxplot! Actually, you will create a couple different versions using the same data, `boxplot_data` which is preloaded in the console. We will create four versions of the boxplot: one with all the points, one with only the whiskers, one with suspected outliers, and one with whiskers and outliers. In order to get this variety, you need to change the `boxpoints` argument in the `go.Box()` functions to the right. 
+In this exercise you will create a boxplot! Actually, you will create a couple different versions using the same data, `boxplot_data` which is preloaded in the console. We will create three versions of the boxplot: one with all the points, one with only the whiskers, and one with whiskers and outliers. For the exercise, we will create traces using `go.Box()`. We already created `trace0` which is available in the console. Take a look at the structure and then follow the instructions to create `trace1` and `trace2`.
+
 
 *** =instructions
-- Set `boxpoints` equal to `'all'`
-- Set `boxpoints` equal to `False`
-- Set `boxpoints` equal to `'suspectedoutliers'`
-- Set `boxpoints` equal to `'outliers'`
+- Create `trace1` where: 
+    - `name = "Only Whiskers"`
+    - `boxpoints = False`
+    - `marker = dict(color = 'rgb(9,56,125)')`
+    - `line = dict(color = 'rgb(9,56,125)')`
+- Create `trace2` where: 
+    - `name = "Whiskers and Outliers"`
+    - `boxpoints = "outliers"`
+    - `marker = dict(color = 'rgb(107,174,214)')`
+    - `line = dict(color = 'rgb(107,174,214)')`
 - Combine the trace objects to create the `data` object by filling in the blanks
 
 *** =hint
@@ -22,71 +29,7 @@ import plotly.plotly as py
 import plotly.graph_objs as go
 py.sign_in('datacamp_python', '9IB7oEs6qib6jiwOTwRA')
 boxplot_data = [0.75, 5.25, 5.5, 6, 6.2, 6.6, 6.80, 7.0, 7.2, 7.5, 7.5, 7.75, 8.15, 8.15, 8.65, 8.93, 9.2, 9.5, 10, 10.25, 11.5, 12, 16, 20.90, 22.3, 23.25]
-```
 
-*** =sample_code
-```{python}
-# Create traces
-trace0 = go.Box(
-    y = boxplot_data,
-    name = "All Points",
-    jitter = 0.3,
-    pointpos = -1.8,
-    boxpoints = ___,
-    marker = dict(
-        color = 'rgb(7,40,89)'),
-    line = dict(
-        color = 'rgb(7,40,89)')
-)
-
-trace1 = go.Box(
-    y = boxplot_data,
-    name = "Only Whiskers",
-    boxpoints = ___,
-    marker = dict(
-        color = 'rgb(9,56,125)'),
-    line = dict(
-        color = 'rgb(9,56,125)')
-)
-
-trace2 = go.Box(
-    y = boxplot_data,
-    name = "Suspected Outliers",
-    boxpoints = ___,
-    marker = dict(
-        color = 'rgb(8,81,156)',
-        outliercolor = 'rgba(219, 64, 82, 0.6)',
-        line = dict(
-            outliercolor = 'rgba(219, 64, 82, 0.6)',
-            outlierwidth = 2)),
-    line = dict(
-        color = 'rgb(8,81,156)')
-)
-
-trace3 = go.Box(
-    y = boxplot_data,
-    name = "Whiskers and Outliers",
-    boxpoints = ___,
-    marker = dict(
-        color = 'rgb(107,174,214)'),
-    line = dict(
-        color = 'rgb(107,174,214)')
-)
-
-# Combine data
-data = [___,___,___,___]
-
-layout = go.Layout(
-    title = "Box Plot Styling Outliers"
-)
-
-fig = go.Figure(data=data,layout=layout)
-py.plot(fig, filename = "Box Plot Styling Outliers")
-```
-
-*** =solution
-```{python}
-# Create traces
 trace0 = go.Box(
     y = boxplot_data,
     name = "All Points",
@@ -99,6 +42,26 @@ trace0 = go.Box(
         color = 'rgb(7,40,89)')
 )
 
+```
+
+*** =sample_code
+```{python}
+# Create traces
+
+
+# Combine trace0, trace1, trace2
+data = [___,___,___]
+
+layout = go.Layout(
+    title = "Box Plot Styling Outliers"
+)
+
+fig = go.Figure(data=data,layout=layout)
+py.plot(fig, filename = "Box Plot Styling Outliers")
+```
+
+*** =solution
+```{python}
 trace1 = go.Box(
     y = boxplot_data,
     name = "Only Whiskers",
@@ -111,20 +74,6 @@ trace1 = go.Box(
 
 trace2 = go.Box(
     y = boxplot_data,
-    name = "Suspected Outliers",
-    boxpoints = 'suspectedoutliers',
-    marker = dict(
-        color = 'rgb(8,81,156)',
-        outliercolor = 'rgba(219, 64, 82, 0.6)',
-        line = dict(
-            outliercolor = 'rgba(219, 64, 82, 0.6)',
-            outlierwidth = 2)),
-    line = dict(
-        color = 'rgb(8,81,156)')
-)
-
-trace3 = go.Box(
-    y = boxplot_data,
     name = "Whiskers and Outliers",
     boxpoints = 'outliers',
     marker = dict(
@@ -134,7 +83,7 @@ trace3 = go.Box(
 )
 
 # Combine data
-data = [trace0,trace1,trace2,trace3]
+data = [trace0,trace1,trace2]
 
 layout = go.Layout(
     title = "Box Plot Styling Outliers"
@@ -147,10 +96,8 @@ py.plot(fig, filename = "Box Plot Styling Outliers")
 
 *** =sct
 ```{python}
-test_object("trace0",incorrect_msg = "Did you change the trace0 object?",do_eval=False)
 test_object("trace1",incorrect_msg = "Did you assign the correct value to the boxpoints argument?",do_eval=False)
 test_object("trace2",incorrect_msg = "Did you assign the correct value to the boxpoints argument?",do_eval=False)
-test_object("trace3",incorrect_msg = "Did you assign the correct value to the boxpoints argument?",do_eval=False)
 test_object("data",incorrect_msg = "Did you assign the correct values to the data object?",do_eval=False)
 success_msg("Super! Now you're getting the hang out it!")
 ```
