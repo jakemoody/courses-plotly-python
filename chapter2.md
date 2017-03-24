@@ -118,7 +118,6 @@ In this exercise you will use the `go.Surface()` to create a trace like the prev
 
 *** =instructions
 - Create an object `data` where the `z` arugument is equal to `z_data` as a matrix (don't forget the bracket notation!)
-- 
 
 *** =hint
 - Look at the Plotly documentation or check previous exercises if you forget the syntax. 
