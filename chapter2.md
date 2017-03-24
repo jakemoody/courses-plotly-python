@@ -305,7 +305,7 @@ df['text'] = df['state'] + '<br>' +\
     'Fruits '+df['total fruits']+' Veggies ' + df['total veggies']+'<br>'+\
     'Wheat '+df['wheat']+' Corn '+df['corn']
 layout = dict(
-        title = '2011 US Agriculture Exports by State<br>(Hover for breakdown)',
+        title = '2011 US Corn Exports by State<br>(Hover for breakdown)',
         geo = dict(
             scope='usa',
             projection=dict( type='albers usa' ),
