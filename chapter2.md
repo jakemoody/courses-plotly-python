@@ -182,6 +182,7 @@ We've loaded a dataset containing US Agricultural Export data by state. This is 
 
 *** =instructions
 - In the `dict()` function, fill in the blank with `'choropleth'`
+- We would like to plot the total export data. View the `df` object and set the `z` argument in the `dict()` function accordingly.
 - Fill in the blank in the `py.plot` function with `'d3-choropleth-map'`
 
 
@@ -217,13 +218,13 @@ layout = dict(
 
 *** =sample_code
 ```{python}
-# Create the data object
+# Create the data object by filling in the blanks
 data = [ dict(
         type=___, # fill in the blank
         colorscale = scl,
         autocolorscale = False,
         locations = df['code'],
-        z = df['total exports'].astype(float),
+        z = df[___].astype(float), # fill in the blank
         locationmode = 'USA-states',
         text = df['text'],
         marker = dict(
