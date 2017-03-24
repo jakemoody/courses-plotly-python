@@ -20,6 +20,7 @@ In this exercise you will create a boxplot! Actually, you will create a couple d
     - `marker = dict(color = 'rgb(107,174,214)')`
     - `line = dict(color = 'rgb(107,174,214)')`
 - Combine the trace objects to create the `data` object by filling in the blanks
+- Complete the `go.Figure()` function to create the `fig` object
 
 *** =hint
 - Simply fill in the blanks using the instructions! 
@@ -52,11 +53,13 @@ trace0 = go.Box(
 # Combine trace0, trace1, trace2
 data = [___,___,___]
 
+# Create the layout
 layout = go.Layout(
     title = "Box Plot Styling Outliers"
 )
 
-fig = go.Figure(data=data,layout=layout)
+# Plot the figure
+fig = go.Figure(data=___,layout=___)
 py.plot(fig, filename = "Box Plot Styling Outliers")
 ```
 
@@ -85,10 +88,12 @@ trace2 = go.Box(
 # Combine data
 data = [trace0,trace1,trace2]
 
+# Create the layout
 layout = go.Layout(
     title = "Box Plot Styling Outliers"
 )
 
+# Plot the figure
 fig = go.Figure(data=data,layout=layout)
 py.plot(fig, filename = "Box Plot Styling Outliers")
 
