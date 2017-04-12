@@ -199,13 +199,13 @@ success_msg("Nice! You just created a 3D plot using Plotly! Let's keeping going 
 --- type:NormalExercise lang:python xp:100 skills:2 key:f2824d0db0
 ## Choropleth maps with Plotly
 
-Choropleth maps are a create way to visualize data in different regions whether it be countys, states, courntries or more. Plotly adds additional value to this style by allowing you to interactively view data for each region by simply by hovering over the space on the map. 
+Choropleth maps are a create way to visualize data in different regions whether it be counties, states, countries or more. Plotly adds additional value to this style by allowing you to interactively view data for each region by simply by hovering over the space on the map. 
 
 We've loaded a dataset containing US Agricultural Export data by state. This is available in the console as `df`. We also created the `layout` object to help get you started. You need to format the data for the Choropleth map and execute the code!
 
 *** =instructions
 - In the `dict()` function, fill in the blank with `'choropleth'`
-- We would like to plot the total export data. View the `df` object and set the `z` argument in the `dict()` function accordingly.
+- Set `df['total exports']` since we want to represent the total exports in our plot
 - Fill in the blank in the `py.plot` function with `'d3-choropleth-map'`
 
 
