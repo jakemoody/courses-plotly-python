@@ -95,7 +95,7 @@ success_msg("Great work! Plotly plots are interactive, so make sure you play aro
 --- type:NormalExercise lang:python xp:100 skills:2 key:5e407595b2
 ## Temperature highs and lows
 
-Alright now it's time to learn by doing! In this exerise you will be challenged to create a Plotly line chart showing average temperature highs and lows in New York throughout 2014. The following data is already available in your environment:
+Alright now it's time to learn by doing! In this exercise you will be challenged to create a Plotly line chart showing average temperature highs and lows in New York throughout 2014. The following data is already available in your environment:
 
 - `month`, contains each month for which there is data
 - `high_2014`, contains the average high temperature for each month
@@ -292,7 +292,7 @@ success_msg("Looking good!")
 
 Let's try one more plot before we finish the chapter! In this exercise you want to compare 2 companies, Company A and Company B. Specifically, you want to compare the headcount by department of each organization. A bar chart is a great way to do this! 
 
-In this exercise, we will create two traces using the `go.Bar()` function. Similiar to the `go.Scatter()` function from the previous exercises, we will need to define `x` and `y` in the function. We will also want to define a `name` ('Company A' or 'Company B') for each trace since we are creating a grouped bar chart. The data you need is prelaoded in the console. The `departments` will serve as your x-axis. The `headcount_company_a` and `headcount_company_b` objects show the headcount numbers by department for each organization. 
+In this exercise, we will create two traces using the `go.Bar()` function. Similar to the `go.Scatter()` function from the previous exercises, we will need to define `x` and `y` in the function. We will also want to define a `name` ('Company A' or 'Company B') for each trace since we are creating a grouped bar chart. The data you need is preloaded in the console. The `departments` will serve as your x-axis. The `headcount_company_a` and `headcount_company_b` objects show the headcount numbers by department for each organization. 
 
 
 *** =instructions

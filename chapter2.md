@@ -5,7 +5,7 @@ description : More advanced plotting
 --- type:NormalExercise lang:python xp:100 skills:2 key:dea4219835
 ## Boxplots with Plotly
 
-In this exercise you will create a boxplot! Actually, you will create a couple different versions using the same data, `boxplot_data` which is preloaded in the console. We will create three versions of the boxplot: one with all the points, one with only the whiskers, and one with whiskers and outliers. For the exercise, we will create traces using `go.Box()`. We already created `trace0` which is available in the console. Take a look at the structure and then follow the instructions to create `trace1` and `trace2`.
+In this exercise, you will create a boxplot! Actually, you will create a couple different versions using the same data, `boxplot_data` which is preloaded in the console. We will create three versions of the boxplot: one with all the points, one with only the whiskers, and one with whiskers and outliers. For the exercise, we will create traces using `go.Box()`. We already created `trace0` which is available in the console. Take a look at the structure and then follow the instructions to create `trace1` and `trace2`.
 
 
 *** =instructions
@@ -137,10 +137,10 @@ success_msg("Super! Now you're getting the hang out it!")
 ## Mapping Mt. Bruno
 
 Next, we're going to show you how you can even visualize surface data with Plotly! The data for Mt. Bruno is preloaded in the console as `z_data`. 
-In this exercise you will use the `go.Surface()` function to create an object called `data`. This time, you only need to set one argument, `z`. The `layout` object has already been created and is available in the console for you.
+In this exercise, you will use the `go.Surface()` function to create an object called `data`. This time, you only need to set one argument, `z`. The `layout` object has already been created and is available in the console for you.
 
 *** =instructions
-- Create an object `data` where the `z` arugument is equal to `z_data` as a matrix (don't forget the bracket notation!)
+- Create an object `data` where the `z` argument is equal to `z_data` as a matrix (don't forget the bracket notation!)
 
 *** =hint
 - The `z` argument should be set to `z = z_data.as_matrix()`
@@ -360,7 +360,8 @@ data = [ dict(
 # Create the fig object 
 
 
-# Use py.plot to create the plat!
+
+# Use py.plot to create the plot!
 
 ```
 
