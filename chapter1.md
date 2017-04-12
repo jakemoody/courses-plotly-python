@@ -204,8 +204,8 @@ Now we're going to try and scatter plots and line plots together! We've already 
 
 *** =instructions
 - Finish `trace0` using the objects stated above. 
-- Create `trace1`. The `mode` and `name` arument should be 'lines+markers'
-- Create `trace2`. The `mode` and `name` arument should be 'markers'
+- Create `trace1`. The `mode` and `name` argument should be 'lines+markers'
+- Create `trace2`. The `mode` and `name` argument should be 'markers'
 - Combine the traces to create a `data` object. 
 *** =hint
 - Take a look at the previous exercises for a refresher on format!

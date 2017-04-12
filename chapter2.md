@@ -49,8 +49,27 @@ trace0 = go.Box(
 
 *** =sample_code
 ```{python}
-# Create traces
+# Create trace1 
+trace1 = go.Box(
+    y = ___,
+    name = ___,
+    boxpoints = ___,
+    marker = dict(
+        color = ___),
+    line = dict(
+        color = __)
+)
 
+# Create trace2
+trace2 = go.Box(
+    y = ___,
+    name = ___,
+    boxpoints = ___,
+    marker = dict(
+        color = ___),
+    line = dict(
+        color = __)
+)
 
 # Combine trace0, trace1, trace2
 data = [___,___,___]
@@ -67,6 +86,9 @@ py.plot(fig, filename = "Box Plot Styling Outliers")
 
 *** =solution
 ```{python}
+
+
+# Create trace1 
 trace1 = go.Box(
     y = boxplot_data,
     name = "Only Whiskers",
@@ -77,6 +99,7 @@ trace1 = go.Box(
         color = 'rgb(9,56,125)')
 )
 
+# Create trace2
 trace2 = go.Box(
     y = boxplot_data,
     name = "Whiskers and Outliers",
