@@ -301,7 +301,7 @@ success_msg("Awesome! Choropleth maps with Plotly can be an extremely helpful wa
 --- type:NormalExercise lang:python xp:100 skills:2 key:4ccd2201ac
 ## Build your own choropleth map
 
-Now you're going to build your own choropleth map with a little less guidance from us! Your mission is to build the same choropleth map as in the last exercise, except instead of `total exports` you will plot `corn`. The data (`df`) and layout for the plot (`layout`) are availavle in the console. 
+Now you're going to build your own choropleth map with a little less guidance from us! Your mission is to build the same choropleth map as in the last exercise, except instead of `'total exports'` you will plot `'corn'`. The data (`df`) and layout for the plot (`layout`) are available in the console. 
 
 *** =instructions
 - Create the `data` object by completing the blanks
