@@ -137,13 +137,13 @@ success_msg("Super! Now you're getting the hang out it!")
 ## Mapping Mt. Bruno
 
 Next, we're going to show you how you can even visualize surface data with Plotly! The data for Mt. Bruno is preloaded in the console as `z_data`. 
-In this exercise you will use the `go.Surface()` to create a trace like the previous. This time, you only need to set one argument, `z`. The `layout` object has already been created and is available in the console for you.
+In this exercise you will use the `go.Surface()` function to create an object called `data`. This time, you only need to set one argument, `z`. The `layout` object has already been created and is available in the console for you.
 
 *** =instructions
 - Create an object `data` where the `z` arugument is equal to `z_data` as a matrix (don't forget the bracket notation!)
 
 *** =hint
-- Look at the Plotly documentation or check previous exercises if you forget the syntax. 
+- The `z` argument should be set to `z = z_data.as_matrix()`
 
 *** =pre_exercise_code
 ```{python}
@@ -178,7 +178,7 @@ py.plot(fig, filename='elevations-3d-surface')
 
 *** =solution
 ```{python}
-# Create the 
+# Create the data object
 data = [
     go.Surface(
         z=z_data.as_matrix()
