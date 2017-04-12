@@ -107,7 +107,7 @@ Now it's your turn! Follow the instructions to complete the code and run the exe
 
 *** =instructions
 - `trace0` has been done for you!
-- Create `trace1` using the available information. The name should be `'Low 2014'`, the color of the line should be defined as `''rgb(22, 96, 167)'`, and the width of the line should be '4'. 
+- Create `trace1` using the available information. Using `month` and `low` in the environment, set `x` and `y` appropriately. The name should be `'Low 2014'`, the color of the line should be defined as `'rgb(22, 96, 167)'`, and the width of the line should be `'4'`. 
 - Execute the rest of the code. 
 
 *** =hint
