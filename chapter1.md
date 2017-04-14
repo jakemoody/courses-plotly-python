@@ -89,6 +89,10 @@ py.plot(data, filename='basic-scatter')
 
 *** =sct
 ```{python}
+test_object("N", incorrect_msg = "Did you correctly define `N`?", do_eval=False)
+test_object("random_x", incorrect_msg = "Did you correctly define `random_x`?", do_eval=False)
+test_object("random_y", incorrect_msg = "Did you correctly define `random_y`?", do_eval=False)
+test_object("trace", incorrect_msg = "Did you correctly define `trace`?", do_eval=False)
 test_object("data", incorrect_msg = "Did you correctly define `data`?", do_eval=False)
 success_msg("Great work! Plotly plots are interactive, so make sure you play around with the scatter plot you produced! We will load the library for you in the rest of the exercises so you can focus on the code!")
 ```
