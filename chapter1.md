@@ -90,7 +90,7 @@ py.plot(data, filename='basic-scatter')
 *** =sct
 ```{python}
 test_object("data", do_eval = False)
-test_function_v2("plotly.plotly.plot", params = ['filename'])
+test_function_v2("plotly.plotly.plot", params=['filename'])
 success_msg("Great work! Plotly plots are interactive, so make sure you play around with the scatter plot you produced! We will load the library for you in the rest of the exercises so you can focus on the code!")
 ```
 --- type:NormalExercise lang:python xp:100 skills:2 key:5e407595b2
