@@ -89,12 +89,6 @@ py.plot(data, filename='basic-scatter')
 
 *** =sct
 ```{python}
-test_import('plotly.plotly',
-            not_imported_msg='Did you import `plotly.plotly` as `py`?',
-            incorrect_as_msg='Did you import `plotly.plotly` as `py`?')
-test_import('plotly.graph_objs',
-            not_imported_msg='Did you import `plotly.graph_objs` as `go`?',
-            incorrect_as_msg='Did you import `plotly.graph_objs` as `go`?')
 test_object("data", incorrect_msg = "Did you correctly define `data`?", do_eval=False)
 success_msg("Great work! Plotly plots are interactive, so make sure you play around with the scatter plot you produced! We will load the library for you in the rest of the exercises so you can focus on the code!")
 ```
