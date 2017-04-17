@@ -89,6 +89,8 @@ py.plot(data, filename='basic-scatter')
 
 *** =sct
 ```{python}
+test_import("plotly.plotly")
+test_import("plotly.graph_objs")
 test_object("data", do_eval = False)
 test_function_v2("plotly.graph_objs.Scatter")
 test_function_v2("plotly.plotly.plot")
