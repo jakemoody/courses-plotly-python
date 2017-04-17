@@ -129,6 +129,10 @@ py.plot(fig, filename = "Box Plot Styling Outliers")
 test_object("trace1",incorrect_msg = "Did you assign the correct value to the boxpoints argument?",do_eval=False)
 test_object("trace2",incorrect_msg = "Did you assign the correct value to the boxpoints argument?",do_eval=False)
 test_object("data",incorrect_msg = "Did you assign the correct values to the data object?",do_eval=False)
+test_function_v2("plotly.graph_objs.Box")
+test_function_v2("plotly.graph_objs.Figure")
+test_function_v2("plotly.graph_objs.Layout")
+test_function_v2("plotly.plotly.plot")
 success_msg("Super! Now you're getting the hang out it!")
 ```
 
@@ -194,6 +198,9 @@ py.plot(fig, filename='elevations-3d-surface')
 ```{python}
 test_object("data",incorrect_msg = "Did you remember to add the bracket notation around your `go.Surface()` function? ",do_eval=False)
 test_object("fig",incorrect_msg = "Did you assign the correct values to the fig object?",do_eval=False)
+test_function_v2("plotly.graph_objs.Surface")
+test_function_v2("plotly.graph_objs.Figure")
+test_function_v2("plotly.plotly.plot")
 success_msg("Nice! You just created a 3D plot using Plotly! Let's keeping going with the next exercises!")
 ```
 --- type:NormalExercise lang:python xp:100 skills:2 key:f2824d0db0
@@ -293,6 +300,7 @@ py.plot( fig, filename='d3-choropleth-map')
 ```{python}
 test_object("data",incorrect_msg = "Did you enter `type='choropleth'`?'",do_eval=False)
 test_object("fig",incorrect_msg = "Did you change the fig object?",do_eval=False)
+test_function_v2("plotly.plotly.plot")
 success_msg("Awesome! Choropleth maps with Plotly can be an extremely helpful way to present your data. Now you'll buld your own in the next exercise!")
 ```
 
@@ -394,5 +402,6 @@ py.plot( fig, filename='d3-choropleth-map')
 ```{python}
 test_object("data",incorrect_msg = "Did you enter `type='choropleth'`?'",do_eval=False)
 test_object("fig",incorrect_msg = "Did you change the fig object?",do_eval=False)
+test_function_v2("plotly.plotly.plot")
 success_msg("Congrats! You just completed the last exercises of our Plotly tutorial. We hope we inspired you to consider Plotly for your next visualization task! You can read their documentation in more depth at https://plot.ly/python")
 ```
