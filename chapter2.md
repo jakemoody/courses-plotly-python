@@ -305,8 +305,8 @@ Now you're going to build your own choropleth map with a little less guidance fr
 
 *** =instructions
 - Create the `data` object by completing the blanks
-- Create the `fig` object
-- Plot the data using `py.plot()`
+- Create the `fig` object using the `data` and `layout` objects. 
+- Plot the data using `py.plot()`. Remember to set the `filename =` argument as `'d3-choropleth-map'`
 *** =hint
 - Take a look at the last exercises to remind yourself about the format!
 
