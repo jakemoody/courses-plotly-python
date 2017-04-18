@@ -93,7 +93,7 @@ test_import("plotly.plotly")
 test_import("plotly.graph_objs")
 test_object("data", do_eval = False)
 test_function_v2("plotly.graph_objs.Scatter")
-test_function_v2("plotly.plotly.plot", params = ["filename"])
+`test_function("plotly.plotly.plot")`
 success_msg("Great work! Plotly plots are interactive, so make sure you play around with the scatter plot you produced! We will load the library for you in the rest of the exercises so you can focus on the code!")
 ```
 --- type:NormalExercise lang:python xp:100 skills:2 key:5e407595b2
