@@ -174,7 +174,11 @@ layout = go.Layout(
 *** =sample_code
 ```{python}
 # Create the data object
-
+data = [
+    go.Surface(
+        z=___
+    )
+]
 # Fill in the blanks and plot the figure
 fig = go.Figure(data=___, layout=___)
 py.plot(fig, filename='elevations-3d-surface')
