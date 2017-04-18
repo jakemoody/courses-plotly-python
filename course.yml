@@ -1,7 +1,7 @@
 title                : Plotly Python
 instructors          :
  - jake@datacamp.com
-description          : This Plotly tutorial will show you how you can use [plotly](https://plot.ly/) to easily create fantastic data visualizations in Python. Learn how to impress your boss, co-workers and friends with interactive, high quality charts and graphs! 
+description          : This Plotly tutorial will show you how you can use <a href="https://plot.ly/">plotly</a> to easily create fantastic data visualizations in Python. Learn how to impress your boss, co-workers and friends with interactive, high quality charts and graphs! 
 university           : DataCamp
 difficulty_level     : 2
 time_needed          : 1 hour
