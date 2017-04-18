@@ -92,7 +92,7 @@ py.plot(data, filename='basic-scatter')
 test_import("plotly.plotly")
 test_import("plotly.graph_objs")
 test_object("data", do_eval = False)
-test_function("plotly.graph_objs.Scatter", do_eval= False)
+test_function("plotly.graph_objs.Scatter")
 test_function("plotly.plotly.plot", do_eval = False)
 success_msg("Great work! Plotly plots are interactive, so make sure you play around with the scatter plot you produced! We will load the library for you in the rest of the exercises so you can focus on the code!")
 ```
