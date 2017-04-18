@@ -202,7 +202,6 @@ py.plot(fig, filename='elevations-3d-surface')
 ```{python}
 test_object("data",incorrect_msg = "Did you remember to add the bracket notation around your `go.Surface()` function? ",do_eval=False)
 test_object("fig",incorrect_msg = "Did you assign the correct values to the fig object?",do_eval=False)
-test_function_v2("plotly.graph_objs.Surface")
 test_function_v2("plotly.graph_objs.Figure")
 test_function_v2("plotly.plotly.plot")
 success_msg("Nice! You just created a 3D plot using Plotly! Let's keeping going with the next exercises!")
