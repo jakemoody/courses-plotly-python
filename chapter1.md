@@ -192,11 +192,11 @@ test_object("trace0",incorrect_msg = "Are you sure you didn't change the trace0 
 test_object("trace1",incorrect_msg = "Did you use low_2014 to create the trace1 object?",do_eval=False)
 test_object("data",incorrect_msg = "Are you sure you didn't change the data object?",do_eval=False)
 test_object("layout",incorrect_msg = "Are you sure you didn't change the layout object?",do_eval=False)
-test_function("plotly.graph_objs.Scatter", do_eval= False)
-test_function("plotly.plotly.plot", do_eval = False)
+test_function("plotly.graph_objs.Scatter", do_eval= False, incorrect_msg ="Check your `go.Scatter` function. Did you assign the arguments correctly?)
+test_function("plotly.plotly.plot", do_eval = False,incorrect_msg ="Did you correctly use the `py.plot` function?)
 
 success_msg("Great work! Plotly makes it easy to not only visualize the temperate changes over time, but also interactively view the specific measures for each month by hovering over the plot.")
-```
+```the 
 
 --- type:NormalExercise lang:python xp:100 skills:2 key:8546b612c1
 ## Try them together
@@ -292,8 +292,8 @@ test_object("trace0",incorrect_msg = "Did you use random_y0 to create the trace0
 test_object("trace1",incorrect_msg = "Did you use random_y1 to create the trace0 object?",do_eval=False)
 test_object("trace2",incorrect_msg = "Did you use random_y2 to create the trace0 object?",do_eval=False)
 test_object("data",incorrect_msg = "Double check your data object!",do_eval=False)
-test_function("plotly.plotly.plot", do_eval = False)
-test_function_v2("plotly.graph_objs.Scatter", do_eval = False)
+test_function_v2("plotly.graph_objs.Scatter", do_eval = False, incorrect_msg ="Did you correctly assign the arguments in the `go.Scatter` function?)
+test_function("plotly.plotly.plot", do_eval = False, incorrect_msg ="Did you correctly assign the arguments in the `py.plot` function?)
 success_msg("Looking good!")
 ```
 --- type:NormalExercise lang:python xp:100 skills:2 key:7a036c016a
@@ -373,9 +373,9 @@ test_object("trace0",incorrect_msg = "Did you change the trace0 object?",do_eval
 test_object("trace1",incorrect_msg = "Did you chance the trace1 object?",do_eval=False)
 test_object("data",incorrect_msg = "Double check your data object!",do_eval=False)
 test_object("fig",incorrect_msg = "Double check your fig object!",do_eval=False)
-test_function("plotly.graph_objs.Bar", do_eval=False)
-test_function("plotly.graph_objs.Figure", do_eval=False)
-test_function("plotly.graph_objs.Layout", do_eval = False)
-test_function("plotly.plotly.plot", do_eval=False)
+test_function("plotly.graph_objs.Bar", do_eval=False, incorrect_msg ="Did you correctly assign the arguments in the `go.Bar` function?)
+test_function("plotly.graph_objs.Figure", do_eval=False, incorrect_msg ="Did you correctly assign the arguments in the `go.Figure` function?)
+test_function("plotly.graph_objs.Layout", do_eval = False, incorrect_msg ="Did you correctly assign the arguments in the `go.Layout` function?)
+test_function("plotly.plotly.plot", do_eval=False, incorrect_msg ="Did you correctly assign the arguments in the `py.plot` function?)
 success_msg("Nice! Let's try some more plots in the next chapter!")
 ```
