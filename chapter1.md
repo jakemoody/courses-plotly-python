@@ -310,6 +310,7 @@ In this exercise, we will create two traces using the `go.Bar()` function. Simil
 - Fill in the blanks to create the `fig` object
 
 *** =hint
+- Make sure you set the `x` argurment, `y` argument and `name` argument for each trace. 
 
 *** =pre_exercise_code
 ```{python}
