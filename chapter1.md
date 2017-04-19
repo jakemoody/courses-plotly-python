@@ -194,7 +194,6 @@ test_object("data",incorrect_msg = "Are you sure you didn't change the data obje
 test_object("layout",incorrect_msg = "Are you sure you didn't change the layout object?",do_eval=False)
 test_function("plotly.graph_objs.Scatter", do_eval= False)
 test_function("plotly.plotly.plot", do_eval = False)
-
 success_msg("Great work! Plotly makes it easy to not only visualize the temperate changes over time, but also interactively view the specific measures for each month by hovering over the plot.")
 ```the 
 
@@ -292,7 +291,7 @@ test_object("trace0",incorrect_msg = "Did you use random_y0 to create the trace0
 test_object("trace1",incorrect_msg = "Did you use random_y1 to create the trace0 object?",do_eval=False)
 test_object("trace2",incorrect_msg = "Did you use random_y2 to create the trace0 object?",do_eval=False)
 test_object("data",incorrect_msg = "Double check your data object!",do_eval=False)
-test_function_v2("plotly.graph_objs.Scatter", do_eval = False, incorrect_msg ="Did you correctly assign the arguments in the `go.Scatter` function?)
+test_function_v2("plotly.graph_objs.Scatter", do_eval = False)
 test_function("plotly.plotly.plot", do_eval = False, incorrect_msg ="Did you correctly assign the arguments in the `py.plot` function?)
 success_msg("Looking good!")
 ```
