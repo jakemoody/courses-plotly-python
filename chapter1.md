@@ -192,8 +192,8 @@ test_object("trace0",incorrect_msg = "Are you sure you didn't change the trace0 
 test_object("trace1",incorrect_msg = "Did you use low_2014 to create the trace1 object?",do_eval=False)
 test_object("data",incorrect_msg = "Are you sure you didn't change the data object?",do_eval=False)
 test_object("layout",incorrect_msg = "Are you sure you didn't change the layout object?",do_eval=False)
-test_function("plotly.graph_objs.Scatter", do_eval= False, incorrect_msg ="Check your `go.Scatter` function. Did you assign the arguments correctly?)
-test_function("plotly.plotly.plot", do_eval = False,incorrect_msg ="Did you correctly use the `py.plot` function?)
+test_function("plotly.graph_objs.Scatter", do_eval= False)
+test_function("plotly.plotly.plot", do_eval = False)
 
 success_msg("Great work! Plotly makes it easy to not only visualize the temperate changes over time, but also interactively view the specific measures for each month by hovering over the plot.")
 ```the 
