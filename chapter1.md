@@ -346,13 +346,13 @@ py.plot(fig, filename='grouped-bar')
 ```{python}
 # Create trace
 trace0 = go.Bar(
-    x=['Marketing', 'Production', 'Finance', 'R&D', 'HR'],
-    y=[5,14,3,3,2],
+    x=departments,
+    y=headcount_company_a,
     name='Company A'
 )
 trace1 = go.Bar(
-    x=['Marketing', 'Production', 'Finance', 'R&D', 'HR'],
-    y=[2,10,3,8,1],
+    x=departments,
+    y=headcount_company_b,
     name='Company B'
 )
 
