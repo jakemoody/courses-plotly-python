@@ -373,9 +373,9 @@ test_object("trace0",incorrect_msg = "Did you change the trace0 object?",do_eval
 test_object("trace1",incorrect_msg = "Did you chance the trace1 object?",do_eval=False)
 test_object("data",incorrect_msg = "Double check your data object!",do_eval=False)
 test_object("fig",incorrect_msg = "Double check your fig object!",do_eval=False)
-test_function("plotly.graph_objs.Bar", do_eval=False, incorrect_msg ="Did you correctly assign the arguments in the `go.Bar` function?)
-test_function("plotly.graph_objs.Figure", do_eval=False, incorrect_msg ="Did you correctly assign the arguments in the `go.Figure` function?)
-test_function("plotly.graph_objs.Layout", do_eval = False, incorrect_msg ="Did you correctly assign the arguments in the `go.Layout` function?)
+test_function("plotly.graph_objs.Bar", do_eval=False)
+test_function("plotly.graph_objs.Figure", do_eval=False)
+test_function("plotly.graph_objs.Layout", do_eval = False)
 test_function("plotly.plotly.plot", do_eval=False, incorrect_msg ="Did you correctly assign the arguments in the `py.plot` function?)
 success_msg("Nice! Let's try some more plots in the next chapter!")
 ```
