@@ -404,7 +404,7 @@ py.plot( fig, filename='d3-choropleth-map')
 
 *** =sct
 ```{python}
-test_object("data",incorrect_msg = "Did you enter `type='choropleth'`?'")
+test_object("data",incorrect_msg = "Did you enter `type='choropleth'`?'", do_eval= False)
 test_object("fig",incorrect_msg = "Did you change the fig object?",do_eval=False)
 test_function("plotly.plotly.plot", do_eval = False)
 success_msg("Congrats! You just completed the last exercises of our Plotly tutorial. We hope we inspired you to consider Plotly for your next visualization task! You can read their documentation in more depth at https://plot.ly/python")
