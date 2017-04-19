@@ -145,6 +145,7 @@ In this exercise, you will use the `go.Surface()` function to create an object c
 
 *** =instructions
 - Create an object `data` where the `z` argument is equal to `z_data` as a matrix (don't forget the bracket notation!)
+- Fill in the blanks using the `data` object and the `layout` object. 
 
 *** =hint
 - The `z` argument should be set to `z = z_data.as_matrix()`
