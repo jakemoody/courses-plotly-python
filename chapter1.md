@@ -92,8 +92,8 @@ py.plot(data, filename='basic-scatter')
 test_import("plotly.plotly")
 test_import("plotly.graph_objs")
 test_object("data", do_eval = False)
-test_function("plotly.graph_objs.Scatter")
-test_function("plotly.plotly.plot", do_eval = False)
+test_function("plotly.graph_objs.Scatter",incorrect_msg = "Check your arguments for the `go.Scatter` function, something is not right.")
+test_function("plotly.plotly.plot", do_eval = False, incorrect_msg = "Whoops! Check your `py.plot` function and be sure to assign the`filename =` argument correctly. ")
 success_msg("Great work! Plotly plots are interactive, so make sure you play around with the scatter plot you produced! We will load the library for you in the rest of the exercises so you can focus on the code!")
 ```
 --- type:NormalExercise lang:python xp:100 skills:2 key:5e407595b2
